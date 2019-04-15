@@ -1,32 +1,30 @@
 # Cplus_libs_wrapper
 一些关于C++的常用功能的接口实现
 
-## 1、C++11 std::chrono库实现获取当前系统时间，自定义一个定时器类
-   位于sources/fun.h
-### 1、定时器类Timer
-```
-#include "fun.h"  // 包含头文件
+## 1、使用C++实现Windows服务
+### (I) 例子1：[A basic Windows service in C++ (CppWindowsService)](https://github.com/ccf19881030/Cplus_libs_wrapper/tree/master/sources/A%20basic%20Windows%20service%20in%20C%2B%2B%20(CppWindowsService))
+### (II) 例子2：[Simple Windows Service in C++](https://github.com/ccf19881030/Cplus_libs_wrapper/tree/master/sources/Simple%20Windows%20Service%20in%20C%2B%2B)
+## 2、Modbus软件开发实战指南 libmodbus库的使用
+### (I) 第7章：在VS2015下使用libmodbus库开发完整RTU模式的示例
+#### RTU Master端:  [TestRtuMaster.c](https://github.com/ccf19881030/Cplus_libs_wrapper/blob/master/sources/MODBUS软件开发实战指南-示例C%2B%2B代码(libmodbus库)/RTU模式源码(Master和Slave)/TestRtuMaster.c)  
+#### RTU Slave端:  [TestRtuSlave.c](https://github.com/ccf19881030/Cplus_libs_wrapper/blob/master/sources/MODBUS软件开发实战指南-示例C%2B%2B代码(libmodbus库)/RTU模式源码(Master和Slave)/TestRtuSlave.c)  
 
-Math::Timer timer;
+### (II) 第8章：在VS2015下使用libmodbus库开发完整的TCP模式示例
+#### TCP Server端:  [TestTcpServer.cpp](https://github.com/ccf19881030/Cplus_libs_wrapper/blob/master/sources/MODBUS软件开发实战指南-示例C%2B%2B代码(libmodbus库)/TCP模式源代码(Server和Client)/TestTcpServer.cpp)  
+#### TCP Client端:  [TestTcpClient.cpp](https://github.com/ccf19881030/Cplus_libs_wrapper/blob/master/sources/MODBUS软件开发实战指南-示例C%2B%2B代码(libmodbus库)/TCP模式源代码(Server和Client)/TestTcpClient.cpp)  
 
-// 自定义一个定时器入口函数，函数声明如：typedef std::function<void()> timer_handler;
-void timer_func()
-{
+## 3、WinHTTPClient的使用例子
 
-    std::cout << "timer begin:" << std::endl;
-    for (int i = 0; i < 1000; ++i)
-    {
-         std::cout << "count = " << i <<" in timer func\n";
-    }
-    std::cout << "timer end:" << std::endl;
-}
-// 启动定时器，间隔定时5秒
-timer.start(std::bind(timer_func), 10);
-```
-### 2、获取当前时间字符串，默认格式 2018-10-01 01:10:20
-   ```
-   #include "fun.h"  // 包含头文件
-    // 获取当前时间字符串，默认格式 2018-10-01 01:10:20
-   Math::Date::getnow("%04d.%02d.%02d %02d:%02d:%02d");
-   ```
+## 4、ThirdParty 一些第三方库
+### ATLRegExp
+
+### MySQLWrapper
+MySQL的C++封装
+[MySQLWrapper](https://github.com/ccf19881030/Cplus_libs_wrapper/tree/master/sources/ThirdParty/MySQLWrapper)
+### XLDownLoad
+C++ 迅雷下载接口、
+[迅雷下载开放引擎 程序实例](http://xldoc.xl7.xunlei.com/0000000026/index.html)
+[XLDownLoad](https://github.com/ccf19881030/Cplus_libs_wrapper/tree/master/sources/ThirdParty/XLDownLoad)
+### EasySize
+[EasySize.h](https://github.com/ccf19881030/Cplus_libs_wrapper/blob/master/sources/ThirdParty/EasySize.h)
 

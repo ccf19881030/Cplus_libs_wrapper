@@ -7,6 +7,8 @@
 
 #include "modbus.h"
 
+#pragma comment(lib, "modbus.lib")
+
 #define SERVER_ID 17
 
 int main(void)

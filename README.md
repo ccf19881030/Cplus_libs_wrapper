@@ -14,10 +14,10 @@
 #### TCP Client端:  [TestTcpClient.cpp](https://github.com/ccf19881030/Cplus_libs_wrapper/blob/master/sources/MODBUS软件开发实战指南-示例C%2B%2B代码(libmodbus库)/TCP模式源代码(Server和Client)/TestTcpClient.cpp)  
 
 ## 3、WinHTTPClient的使用例子
-
+[WinHTTPClient](https://github.com/ccf19881030/Cplus_libs_wrapper/tree/master/sources/WinHttpClient/WinHttpClient_Src/WinHTTPClient)
 ## 4、ThirdParty 一些第三方库
 ### ATLRegExp
-
+[ATL正则表达式](https://github.com/ccf19881030/Cplus_libs_wrapper/tree/master/sources/ThirdParty/ATLRegExp)
 ### MySQLWrapper
 MySQL的C++封装
 [MySQLWrapper](https://github.com/ccf19881030/Cplus_libs_wrapper/tree/master/sources/ThirdParty/MySQLWrapper)

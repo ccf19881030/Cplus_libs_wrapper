@@ -8,6 +8,8 @@
 
 #include "modbus.h"            //引用libmodbus库
 
+#pragma comment(lib, "modbus.lib")
+
 /*The goal of this program is to check all major functions of libmodbus:
 -write_coil
 -read_bits

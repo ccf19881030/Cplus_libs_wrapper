@@ -2,7 +2,6 @@
 fun.h中相关函数的使用
 
 ## 1、C++11 std::chrono库实现获取当前系统时间，自定义一个定时器类
-   位于sources/fun.h
 ### 1、定时器类Timer
 ```
 #include "fun.h"  // 包含头文件

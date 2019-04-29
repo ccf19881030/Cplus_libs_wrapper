@@ -8,5 +8,6 @@
 #### 3、[mosquitto安装测试（windows10 64bit）](https://blog.csdn.net/mu66mu/article/details/84143168)
 
 ### MQTT相关
-#### 1、[初识 MQTT](https://www.ibm.com/developerworks/cn/iot/iot-mqtt-why-good-for-iot/index.html)
-#### 2、[MQTT的学习研究（十六） MQTT的Mosquitto的window安装部署](https://topmanopensource.iteye.com/blog/1703810)
+#### 1、[mqtt wiki](https://github.com/mqtt/mqtt.github.io/wiki)
+#### 2、[初识 MQTT](https://www.ibm.com/developerworks/cn/iot/iot-mqtt-why-good-for-iot/index.html)
+#### 3、[MQTT的学习研究（十六） MQTT的Mosquitto的window安装部署](https://topmanopensource.iteye.com/blog/1703810)

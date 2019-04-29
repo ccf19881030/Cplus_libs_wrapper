@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	mysqlConnHandle = mysql_init(NULL);
 	mysql_options(mysqlConnHandle, MYSQL_SET_CHARSET_NAME, "gbk");//连接选项：添加GBK字符集支持
 
-	if (NULL == mysql_real_connect(mysqlConnHandle, "127.0.0.1", "root", "cppadmin@123", "test", 0, NULL, 0))
+	if (NULL == mysql_real_connect(mysqlConnHandle, "127.0.0.1", "username", "password", 0, NULL, 0))
 	{
 		std::cout << "Failed to connect to database: Error: " << mysql_error(mysqlConnHandle);
 	}

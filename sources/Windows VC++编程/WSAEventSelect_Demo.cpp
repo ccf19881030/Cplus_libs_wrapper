@@ -209,6 +209,12 @@ int WSAEventSelect_Demo()
 			// 从套接字和事件数组中删除该套接字和相应的事件句柄，紧凑两个数组并将EventTotal计数器减1，
 			// 该函数的实现省略了
 			//CompressArrays(Event, Socket, &EventTotal);
+			for (size_t i = Index - WSA_WAIT_EVENT_0; i < EventTotal; i++)
+			{
+				SocketArray[i] = SocketArray[i + 1];
+				EventArray[i] = EventArray[i + 1];
+			}
+			EventTotal--;
 		}
 	} 
 

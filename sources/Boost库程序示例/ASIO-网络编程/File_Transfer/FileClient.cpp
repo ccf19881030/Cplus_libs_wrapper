@@ -25,16 +25,14 @@ Implement the client and server with callbacks.
 
 *****************************************************************************************************/
 
-typedef unsigned int uint32;
-
 typedef struct  FileInfo
 {
-	FileInfo(uint32 fileLen, std::string fileContent)
+	FileInfo(std::size_t fileLen, std::string fileContent)
 	{
 		fileLength_ = fileLen;
 		fileContent_ = fileContent;
 	}
-	uint32  fileLength_;					// 文件长度
+	std::size_t  fileLength_;				// 文件长度
 	//std::string filePath_;				// 文件路径
 	std::string fileContent_;				// 文件内容
 	//std::string fileExtent_;				// 文件扩展名
@@ -169,23 +167,21 @@ int main(int argc, char* argv[])
 		tcp::resolver resolver(io_context);
 		auto endpoints = resolver.resolve(argv[1], argv[2]);
 		
-		// 发送文件到服务端
+		// 从命令行参数中获取文件路径
 		std::string filePath = argv[3];
 
-		// file test demo
-		std::string data;
 
 		std::ifstream is(filePath.c_str(), std::ifstream::binary);
-		uint32 length = 0;
+		std::size_t length = 0;
 		if (!is)
 		{
 			std::cout << "读取文件:" << filePath.c_str() << "失败!" << std::endl;
 		}
 		
 
-		// get length of file:
+		// 获取文件长度
 		is.seekg(0, is.end);
-		length = (uint32)is.tellg();
+		length = (std::size_t)is.tellg();
 		is.seekg(0, is.beg);
 
 		char * buffer = new char[length];

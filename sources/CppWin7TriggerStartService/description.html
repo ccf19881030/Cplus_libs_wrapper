@@ -1,0 +1,885 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/67b74b86-a273-4ad7-9ed5-0f97276412eaCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Win7 trigger-start Windows service demo (CppWin7TriggerStartService)</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Win7 trigger-start Windows service demo (CppWin7TriggerStartService)</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Windows 7
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Windows Service, Windows 7
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">8/20/2012</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/CppWin7TriggerStartService-8ba5bd5b">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Win7 trigger-start Windows service demo (C<span style="">pp</span>Win7TriggerStartService)</h1>
+<h2>Introduction</h2>
+<p class="MsoNormal">Services and background processes have tremendous influence on the overall performance of the system. If we could just cut down on the total number of services, we would reduce the total power consumption and increase the overall stability
+ of the system. The Windows 7 Service Control Manager has been extended so that a service can be automatically started and stopped when a specific system event, or trigger, occurs on the system. The new mechanism is called Service Trigger Event. A service can
+ register to be started or stopped when a trigger event occurs. This enables services to start when needed instead of starting automatically whether or not there is work to do. Examples of predefined trigger events include arrival of a device of a specified
+ device interface class or availability of a particular firewall port. A service can also register for a custom trigger event generated by an Event Tracing for Windows (ETW) provider.<span style="">
+</span></p>
+<p class="MsoNormal">This <span style="">VC&#43;&#43;</span> code sample shows how to create a trigger-start service that starts when a generic USB disk becomes available. The sample also shows how to create a trigger-start service that starts a service when the
+ first IP address on the TCP/IP networking stack becomes available, and stops a service when the last IP address on the TCP/IP networking stack becomes unavailable. These start and stop events are reported in the Application log.<span style="">
+</span></p>
+<h2>Running the Sample<span style=""> </span></h2>
+<p class="MsoNormal"><span style=""></span></p>
+<p class="MsoNormal"><span style="">You must run this code sample on a Windows Server 2008 R2 or Windows 7-based computer. Service trigger events are not supported until Windows Server 2008 R2 and Windows 7, and you need
+<a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=c17ba869-9671-4330-a63e-1fd44e0e2505&amp;displaylang=en">
+Microsoft Windows SDK for Windows 7 and .NET Framework 3.5 SP1</a> to build the CppWin7TriggerStartService project.
+</span></p>
+<p class="MsoNormal"><span style=""></span></p>
+<p class="MsoListParagraphCxSpFirst" style="text-indent:5.0pt"><span style=""><span style="">A.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Demonstration of the trigger start service sample that starts when a generic USB disk becomes available
+</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt; text-indent:5.0pt">
+<span style=""><span style="">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Build the project. </span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><span style="">After build, you will get a service application: CppWin7TriggerStartService.exe.
+</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><span style=""></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt; text-indent:5.0pt">
+<span style=""><span style="">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Install Windows Service. </span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><span style="">Run a command prompt as administrator, navigate to the output folder of the sample project, and enter the following command to install the service.
+</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><b style=""><u><span style="">CppWin7TriggerStartService.exe -install
+</span></u></b></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><span style=""></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><span style="">The service is successfully installed if the process outputs:
+</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><span style=""></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><i style=""><span style="">CppWin7TriggerStartService Sample Service installed.
+</span></i></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><i style=""><span style="">Configuring service trigger start...
+</span></i></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><span style=""></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><span style="">And then pen Service Management Console (<span class="SpellE">services.msc</span>). You should be able to find &quot;CppWin7TriggerStartService Sample Service&quot; in the service
+ list. </span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><span style=""></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt; text-indent:5.0pt">
+<span style=""><span style="">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Trigger the service. </span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><span style="">Plug in a generic USB disk to the computer, and refresh the service status in Service Management Console after a short while. You would find that CppWin7TriggerStartService Sample
+ Service is trigger-started. </span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><span style=""></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt; text-indent:5.0pt">
+<span style=""><span style="">4.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Clean up </span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><span style="">Run following command to uninstall the service.
+</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><b style=""><u><span style="">CppWin7TriggerStartService.exe -remove</span></u></b><span style="">
+</span></p>
+<p class="MsoListParagraphCxSpMiddle"><span style=""></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:5.0pt"><span style=""><span style="">B.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Demonstration a trigger-start service that starts a service when the first IP address on the TCP/IP networking stack becomes available, and stops a service when the last IP address on the TCP/IP networking stack becomes unavailable.
+</span></p>
+<p class="MsoListParagraphCxSpMiddle"><span style=""></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt; text-indent:5.0pt">
+<span style=""><span style="">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Modify the source and rebuild. </span></p>
+<p class="MsoListParagraphCxSpLast" style="margin-left:54.0pt"><span style="">Replace the code line
+</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C&#43;&#43;</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span>
+</div>
+<span class="hidden">cplusplus</span>
+<pre class="hidden">
+#define SERVICE_TRIGGER_START_ON_USB
+
+</pre>
+<pre id="codePreview" class="cplusplus">
+#define SERVICE_TRIGGER_START_ON_USB
+
+</pre>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p class="MsoListParagraph" style="margin-left:54.0pt"><span style="">With </span>
+</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C&#43;&#43;</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span>
+</div>
+<span class="hidden">cplusplus</span>
+<pre class="hidden">
+#define SERVICE_TRIGGER_START_ON_IP_ADDRESS
+
+</pre>
+<pre id="codePreview" class="cplusplus">
+#define SERVICE_TRIGGER_START_ON_IP_ADDRESS
+
+</pre>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p class="MsoListParagraphCxSpFirst" style="margin-left:54.0pt"><span style=""></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><span style=""></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt; text-indent:5.0pt">
+<span style=""><span style="">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Redo the A.2 step to install the service. </span>
+</p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><span style=""></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt; text-indent:5.0pt">
+<span style=""><span style="">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Trigger the service. </span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><span style="">Disconnect the computer from network. Make sure that the CppWin7TriggerStartService service is stopped at the moment. Plug in your network cable and refresh the service status
+ in Service Management Console after the network is connected. You should find that the service is trigger-started. Next, unplug the network cable from your computer. You would see that the service is trigger-stopped in the meantime the network is disconnected.
+</span></p>
+<p class="MsoListParagraphCxSpMiddle"><span style=""></span></p>
+<p class="MsoListParagraphCxSpLast" style="margin-left:54.0pt; text-indent:5.0pt">
+<span style=""><span style="">4.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Redo the A.4 step to uninstall the service </span>
+</p>
+<h2>Using the Code</h2>
+<p class="MsoListParagraphCxSpFirst" style="text-indent:5.0pt"><span style=""><span style="">A.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Creation </span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt; text-indent:5.0pt">
+<span style=""><span style="">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">In Visual Studio 2008, add a new Visual C&#43;&#43; / Win32 / Win32 Console Application project named CppWin7TriggerStartService. Unselect the &quot;Precompiled header&quot; option in Application Settings of the Win32 Application
+ Wizard, and delete <span class="SpellE">stdafx.h</span>, stdafx.cpp, <span class="SpellE">
+targetver.h</span> files after the project is created. </span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><span style=""></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt; text-indent:5.0pt">
+<span style=""><span style="">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Replace the main function with the code below. According to the arguments in the command line, the function installs or uninstalls or starts or queries the service by calling into different routines that will be declared
+ and implemented in the next steps. </span></p>
+<p class="MsoListParagraphCxSpLast"><span style=""></span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C&#43;&#43;</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span>
+</div>
+<span class="hidden">cplusplus</span>
+<pre class="hidden">
+int wmain(int argc, wchar_t* argv[])
+{
+    if ((argc &gt; 1) && ((*argv[1] == L'-' || (*argv[1] == L'/'))))
+    {
+        if (_wcsicmp(L&quot;install&quot;, argv[1] &#43; 1) == 0)
+        {
+            SvcInstall();
+        }
+        else if (_wcsicmp(L&quot;remove&quot;, argv[1] &#43; 1) == 0)
+        {
+            SvcUninstall();
+        }
+        else if (_wcsicmp(L&quot;query&quot;, argv[1] &#43; 1) == 0)
+        {
+            SvcQueryConfig();
+        }
+    }
+    else
+    {
+        _putws(L&quot;Parameters:&quot;);
+        _putws(L&quot; -install    to install the service (require admin permission)&quot;);
+        _putws(L&quot; -remove     to remove the service (require admin permission)&quot;);
+        _putws(L&quot; -query      to query the configuration of the service&quot;);
+
+
+        RunService();
+    }
+
+
+    return 0;
+}
+
+</pre>
+<pre id="codePreview" class="cplusplus">
+int wmain(int argc, wchar_t* argv[])
+{
+    if ((argc &gt; 1) && ((*argv[1] == L'-' || (*argv[1] == L'/'))))
+    {
+        if (_wcsicmp(L&quot;install&quot;, argv[1] &#43; 1) == 0)
+        {
+            SvcInstall();
+        }
+        else if (_wcsicmp(L&quot;remove&quot;, argv[1] &#43; 1) == 0)
+        {
+            SvcUninstall();
+        }
+        else if (_wcsicmp(L&quot;query&quot;, argv[1] &#43; 1) == 0)
+        {
+            SvcQueryConfig();
+        }
+    }
+    else
+    {
+        _putws(L&quot;Parameters:&quot;);
+        _putws(L&quot; -install    to install the service (require admin permission)&quot;);
+        _putws(L&quot; -remove     to remove the service (require admin permission)&quot;);
+        _putws(L&quot; -query      to query the configuration of the service&quot;);
+
+
+        RunService();
+    }
+
+
+    return 0;
+}
+
+</pre>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p class="MsoListParagraphCxSpFirst" style="margin-left:54.0pt"><span style=""></span></p>
+<p class="MsoListParagraphCxSpLast" style="margin-left:54.0pt; text-indent:5.0pt">
+<span style=""><span style="">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Add the <span class="SpellE">Service.h</span> file to define the global settings of the Windows service:
+</span></p>
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="margin-left:54.0pt; border-collapse:collapse; border:none">
+<tbody>
+<tr style="">
+<td width="295" valign="top" style="width:221.4pt; border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal"><span style="">SERVICE_NAME</span><span style=""> </span></p>
+</td>
+<td width="295" valign="top" style="width:221.4pt; border:solid windowtext 1.0pt; border-left:none; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal"><span style="">Internal&nbsp;name&nbsp;of&nbsp;the&nbsp;service</span><span style="">
+</span></p>
+</td>
+</tr>
+<tr style="">
+<td width="295" valign="top" style="width:221.4pt; border:solid windowtext 1.0pt; border-top:none; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal"><span style="">SERVICE_DISPLAY_NAME</span><span style=""> </span>
+</p>
+</td>
+<td width="295" valign="top" style="width:221.4pt; border-top:none; border-left:none; border-bottom:solid windowtext 1.0pt; border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal"><span style="">Displayed&nbsp;name&nbsp;of&nbsp;the&nbsp;service</span><span style="">
+</span></p>
+</td>
+</tr>
+<tr style="">
+<td width="295" valign="top" style="width:221.4pt; border:solid windowtext 1.0pt; border-top:none; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal"><span style="">SERVICE_DEPENDENCIES</span><span style=""> </span>
+</p>
+</td>
+<td width="295" valign="top" style="width:221.4pt; border-top:none; border-left:none; border-bottom:solid windowtext 1.0pt; border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal"><span style="">List&nbsp;of&nbsp;service&nbsp;dependencies</span><span style="">
+</span></p>
+</td>
+</tr>
+<tr style="">
+<td width="295" valign="top" style="width:221.4pt; border:solid windowtext 1.0pt; border-top:none; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal"><span style="">SERVICE_ACCOUNT</span><span style=""> </span>
+</p>
+</td>
+<td width="295" valign="top" style="width:221.4pt; border-top:none; border-left:none; border-bottom:solid windowtext 1.0pt; border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal"><span style="">The&nbsp;account&nbsp;under&nbsp;which&nbsp;the&nbsp;service&nbsp;should&nbsp;run</span><span style="">
+</span></p>
+</td>
+</tr>
+<tr style="">
+<td width="295" valign="top" style="width:221.4pt; border:solid windowtext 1.0pt; border-top:none; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal"><span style="">SERVICE_PASSWORD</span><span style=""> </span>
+</p>
+</td>
+<td width="295" valign="top" style="width:221.4pt; border-top:none; border-left:none; border-bottom:solid windowtext 1.0pt; border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal"><span style="">The&nbsp;password&nbsp;to&nbsp;the&nbsp;service&nbsp;account&nbsp;name</span><span style="">
+</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoListParagraphCxSpFirst" style="margin-left:54.0pt"><span style=""></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><span style="">In the file, declare the starting point of running the service:
+<span class="SpellE">RunService</span>. </span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><span style=""></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><span style="">Add the Service.cpp file to implement the skeleton of the Windows service.
+</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><span style="">These functions can be reused by all Windows services:
+</span></p>
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="margin-left:54.0pt; border-collapse:collapse; border:none">
+<tbody>
+<tr style="">
+<td width="295" valign="top" style="width:221.4pt; border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:0cm"><span class="SpellE"><span style="">SvcMain</span></span><span style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></p>
+</td>
+<td width="295" valign="top" style="width:221.4pt; border:solid windowtext 1.0pt; border-left:none; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoListParagraphCxSpLast" style="margin-left:0cm"><span style="">Entry point for the service
+</span></p>
+</td>
+</tr>
+<tr style="">
+<td width="295" valign="top" style="width:221.4pt; border:solid windowtext 1.0pt; border-top:none; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoListParagraphCxSpFirst" style="margin-left:0cm"><span class="SpellE"><span style="">SvcCtrlHandler</span></span><span style=""><span style="">&nbsp;&nbsp;
+</span><span style="">&nbsp;&nbsp;</span> </span></p>
+</td>
+<td width="295" valign="top" style="width:221.4pt; border-top:none; border-left:none; border-bottom:solid windowtext 1.0pt; border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoListParagraphCxSpLast" style="margin-left:0cm"><span style="">Service control handler
+</span></p>
+</td>
+</tr>
+<tr style="">
+<td width="295" valign="top" style="width:221.4pt; border:solid windowtext 1.0pt; border-top:none; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoListParagraphCxSpFirst" style="margin-left:0cm"><span class="SpellE"><span style="">SvcReportStatus</span></span><span style=""><span style="">&nbsp;&nbsp;&nbsp;
+</span></span></p>
+</td>
+<td width="295" valign="top" style="width:221.4pt; border-top:none; border-left:none; border-bottom:solid windowtext 1.0pt; border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoListParagraphCxSpLast" style="margin-left:0cm"><span style="">Report service status to SCM
+</span></p>
+</td>
+</tr>
+<tr style="">
+<td width="295" valign="top" style="width:221.4pt; border:solid windowtext 1.0pt; border-top:none; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoListParagraph" style="margin-left:0cm"><span class="SpellE"><span style="">SvcReportEvent</span></span><span style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></p>
+</td>
+<td width="295" valign="top" style="width:221.4pt; border-top:none; border-left:none; border-bottom:solid windowtext 1.0pt; border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal"><span style="">Report an event to Windows event log </span>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoNormal"><span style=""><span style="">&nbsp; </span></span></p>
+<p class="MsoNormal" style="margin-left:49.65pt"><span style="">You can customize the service body by rewriting the
+<span class="SpellE">SvcInit</span> and <span class="SpellE">SvcStop</span> functions. They are called when the service is being started and when the service is to be stopped respectively. For example, you can create a named pipe and monitor the named pipe
+ in <span class="SpellE">SvcInit</span>, and close the named pipe in <span class="SpellE">
+SvcStop</span>. In this sample, we just report the function call information to the Application log in the two functions to keep the sample simple.
+</span></p>
+<p class="MsoListParagraph" style="margin-left:54.0pt; text-indent:5.0pt"><span style=""><span style="">4.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Add the <span class="SpellE">ServiceInstaller.h</span> and ServiceInstaller.cpp files to declare and implement functions of installing, uninstalling, and querying the service.
+</span></p>
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="margin-left:54.0pt; border-collapse:collapse; border:none">
+<tbody>
+<tr style="">
+<td width="295" valign="top" style="width:221.4pt; border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal"><span class="SpellE"><span style="">SvcInstall</span></span><span style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></p>
+</td>
+<td width="295" valign="top" style="width:221.4pt; border:solid windowtext 1.0pt; border-left:none; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal"><span style="font-size:10.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:black">Installs&nbsp;the&nbsp;service</span><span style="">
+</span></p>
+</td>
+</tr>
+<tr style="">
+<td width="295" valign="top" style="width:221.4pt; border:solid windowtext 1.0pt; border-top:none; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal"><span class="SpellE"><span style="font-size:10.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:black">SvcUninstall</span></span><span style="font-size:10.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="">
+</span></p>
+</td>
+<td width="295" valign="top" style="width:221.4pt; border-top:none; border-left:none; border-bottom:solid windowtext 1.0pt; border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal"><span style="font-size:10.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:black">Uninstalls&nbsp;the&nbsp;service</span><span style="">
+</span></p>
+</td>
+</tr>
+<tr style="">
+<td width="295" valign="top" style="width:221.4pt; border:solid windowtext 1.0pt; border-top:none; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal"><span class="SpellE"><span style="font-size:10.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:black">SvcQueryConfig</span></span><span style="font-size:10.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="">
+</span></p>
+</td>
+<td width="295" valign="top" style="width:221.4pt; border-top:none; border-left:none; border-bottom:solid windowtext 1.0pt; border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal"><span style="font-size:10.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:black">Query&nbsp;the&nbsp;service&nbsp;status&nbsp;and&nbsp;trigger-start&nbsp;configuration</span><span style="">
+</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoNormal"><span style=""></span></p>
+<p class="MsoListParagraphCxSpFirst" style="margin-left:54.0pt"><span style=""></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:5.0pt"><span style=""><span style="">B.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Configuring the service to trigger-start when a generic USB disk becomes available (or trigger-start when the first IP address becomes
+<span class="GramE">available,</span> and trigger-stop when the last IP address becomes unavailable.)
+</span></p>
+<p class="MsoListParagraphCxSpMiddle"><span style=""></span></p>
+<p class="MsoListParagraphCxSpMiddle"><span style="">Services can be registered as trigger-start from the sc.exe command line utility (using the
+<span class="SpellE">sc</span> <span class="SpellE">triggerinfo</span> command and need to run the Command Shell as Administrator), or using the ChangeServiceConfig2 API programmatically. The
+<span class="SpellE">SvcInstall</span> function in <span class="SpellE">ServiceInstaller.h</span>/<span class="SpellE">cpp</span> allows us to execute some codes to register the service as trigger-start while the service is installed.
+</span></p>
+<p class="MsoListParagraphCxSpMiddle"><span style=""></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:72.0pt; text-indent:5.0pt">
+<span style=""><span style="">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Add the <span class="SpellE">ServiceTriggerStart.h</span> and ServiceTriggerStart.cpp files. These files declare and implement functions to set and get the configuration of service trigger start.
+</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:72.0pt"><span style=""></span></p>
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="margin-left:54.0pt; border-collapse:collapse; border:none">
+<tbody>
+<tr style="">
+<td width="387" valign="top" style="width:290.55pt; border:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoListParagraphCxSpLast" style="margin-left:0cm"><span class="SpellE"><span style="">SupportServiceTriggerStart</span></span><span style="">
+</span></p>
+</td>
+<td width="483" valign="top" style="width:362.1pt; border:solid windowtext 1.0pt; border-left:none; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal"><span style="">Check whether the current system supports service trigger start. Service trigger events are not supported until Windows Server 2008 R2 and Windows 7. Windows Server 2008 R2 and Windows 7 have major version 6 and minor version
+ 1. </span></p>
+</td>
+</tr>
+<tr style="">
+<td width="387" valign="top" style="width:290.55pt; border:solid windowtext 1.0pt; border-top:none; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoListParagraph" style="margin-left:0cm"><span class="SpellE"><span style="">GetServiceTriggerInfo</span></span><span style="">
+</span></p>
+</td>
+<td width="483" valign="top" style="width:362.1pt; border-top:none; border-left:none; border-bottom:solid windowtext 1.0pt; border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal"><span style="">Get the trigger-start configuration of a service.
+</span></p>
+</td>
+</tr>
+<tr style="">
+<td width="387" valign="top" style="width:290.55pt; border:solid windowtext 1.0pt; border-top:none; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoListParagraph" style="margin-left:0cm"><span class="SpellE"><span style="">SetServiceTriggerStartOnUSBArrival</span></span><span style="">
+</span></p>
+</td>
+<td width="483" valign="top" style="width:362.1pt; border-top:none; border-left:none; border-bottom:solid windowtext 1.0pt; border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal"><span style="">Set the service to trigger-start when a generic USB disk becomes available.
+</span></p>
+</td>
+</tr>
+<tr style="">
+<td width="387" valign="top" style="width:290.55pt; border:solid windowtext 1.0pt; border-top:none; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoListParagraph" style="margin-left:0cm"><span class="SpellE"><span style="">SetServiceTriggerStartOnIPAddressArrival</span></span><span style="">
+</span></p>
+</td>
+<td width="483" valign="top" style="width:362.1pt; border-top:none; border-left:none; border-bottom:solid windowtext 1.0pt; border-right:solid windowtext 1.0pt; padding:0cm 5.4pt 0cm 5.4pt">
+<p class="MsoNormal"><span style="">Set the service to trigger-start when the first IP address on the TCP/IP networking stack becomes available, and trigger-stop when the last IP address on the TCP/IP networking stack becomes unavailable.
+</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoListParagraphCxSpFirst" style="margin-left:54.0pt"><span style=""></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><span style="">Take
+<span class="SpellE"><b style="">SetServiceTriggerStartOnUSBArrival</b></span> as an example. The function modifies service configuration by calling the Win32 API
+<b style="">ChangeServiceConfig2</b> to set service trigger start on USB arrival.
+</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><span style=""></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:72.0pt; text-indent:5.0pt">
+<span style=""><span style="">a.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Allocate a SERVICE_TRIGGER_SPECIFIC_DATA_ITEM structure
+</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:90.0pt; text-indent:5.0pt">
+<span style=""><span style=""><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Set its <span class="SpellE">dwDataType</span> member to SERVICE_TRIGGER_DATA_TYPE_STRING
+</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:90.0pt; text-indent:5.0pt">
+<span style=""><span style=""><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ii.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Set its <span class="SpellE">cbData</span> member to the length of the string L&quot;USBSTOR\\<span class="SpellE">GenDisk</span>&quot; in bytes
+</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:90.0pt; text-indent:5.0pt">
+<span style=""><span style=""><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>iii.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Set its <span class="SpellE">pData</span> member to that string.
+</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:90.0pt"><span style=""></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:72.0pt; text-indent:5.0pt">
+<span style=""><span style="">b.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Allocate a SERVICE_TRIGGER structure </span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:90.0pt; text-indent:5.0pt">
+<span style=""><span style=""><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Set its <span class="SpellE">dwTriggerType</span> member to<span style="">&nbsp;
+</span>SERVICE_TRIGGER_TYPE_DEVICE_INTERFACE_ARRIVAL </span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:90.0pt; text-indent:5.0pt">
+<span style=""><span style=""><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ii.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Set its <span class="SpellE">dwAction</span> member to SERVICE_TRIGGER_ACTION_SERVICE_START
+</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:90.0pt; text-indent:5.0pt">
+<span style=""><span style=""><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>iii.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Set its <span class="SpellE">pTriggerSubtype</span> member to the address of the<span style="">&nbsp;&nbsp;
+</span>GUID_DEVINTERFACE_DISK GUID </span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:90.0pt; text-indent:5.0pt">
+<span style=""><span style=""><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>iv.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Set its <span class="SpellE">cDataItems</span> member to 1 and its
+<span class="SpellE">pDataItems</span> member to the address of the structure allocated in the previous step.
+</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:90.0pt"><span style=""></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:72.0pt; text-indent:5.0pt">
+<span style=""><span style="">c.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Allocate a SERVICE_TRIGGER_INFO structure </span>
+</p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:72.0pt"><span style="">Set its
+<span class="SpellE">cTriggers</span> member to 1 and its <span class="SpellE">
+pTriggers</span> member to the address<span style="">&nbsp;&nbsp;&nbsp; </span>of the structure allocated in the previous step.
+</span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:72.0pt"><span style=""></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:72.0pt; text-indent:5.0pt">
+<span style=""><span style="">d.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">Call the ChangeServiceConfig2 function with <span class="GramE">
+the<b style=""><span style="">&nbsp; </span>SERVICE</b></span><b style="">_CONFIG_TRIGGER_INFO</b> information level and pass to it the address<span style="">&nbsp;
+</span>of the structure allocated in the previous step. </span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:72.0pt"><span style=""></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:54.0pt"><span style="">The complete code of setting service
+<span class="SpellE">tigger</span> start on USB arrival is: </span></p>
+<p class="MsoListParagraphCxSpLast" style="margin-left:54.0pt"><span style=""></span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C&#43;&#43;</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span>
+</div>
+<span class="hidden">cplusplus</span>
+<pre class="hidden">
+// Hardware ID generated by the USB storage port driver
+LPCWSTR lpszDeviceData = L&quot;USBSTOR\\GenDisk&quot;;
+
+
+// Allocate and set the SERVICE_TRIGGER_SPECIFIC_DATA_ITEM structure
+SERVICE_TRIGGER_SPECIFIC_DATA_ITEM deviceData = {0};
+deviceData.dwDataType = SERVICE_TRIGGER_DATA_TYPE_STRING;
+deviceData.cbData = (DWORD)((wcslen(lpszDeviceData)&#43;1) * 
+    sizeof(*lpszDeviceData));
+deviceData.pData = (PBYTE)lpszDeviceData;
+
+
+// Allocate and set the SERVICE_TRIGGER structure
+SERVICE_TRIGGER serviceTrigger = {0};
+serviceTrigger.dwTriggerType = 
+    SERVICE_TRIGGER_TYPE_DEVICE_INTERFACE_ARRIVAL;
+serviceTrigger.dwAction = SERVICE_TRIGGER_ACTION_SERVICE_START;
+serviceTrigger.pTriggerSubtype = const_cast&lt;GUID*&gt;(
+    &GUID_DEVINTERFACE_DISK);
+serviceTrigger.cDataItems = 1;
+serviceTrigger.pDataItems = &deviceData;
+
+
+// Allocate and set the SERVICE_TRIGGER_INFO structure
+SERVICE_TRIGGER_INFO serviceTriggerInfo = {0};
+serviceTriggerInfo.cTriggers = 1;
+serviceTriggerInfo.pTriggers = &serviceTrigger;
+
+
+// Call ChangeServiceConfig2 with the SERVICE_CONFIG_TRIGGER_INFO level 
+// and pass to it the address of the SERVICE_TRIGGER_INFO structure
+return ChangeServiceConfig2(hService, SERVICE_CONFIG_TRIGGER_INFO, 
+    &serviceTriggerInfo);
+
+</pre>
+<pre id="codePreview" class="cplusplus">
+// Hardware ID generated by the USB storage port driver
+LPCWSTR lpszDeviceData = L&quot;USBSTOR\\GenDisk&quot;;
+
+
+// Allocate and set the SERVICE_TRIGGER_SPECIFIC_DATA_ITEM structure
+SERVICE_TRIGGER_SPECIFIC_DATA_ITEM deviceData = {0};
+deviceData.dwDataType = SERVICE_TRIGGER_DATA_TYPE_STRING;
+deviceData.cbData = (DWORD)((wcslen(lpszDeviceData)&#43;1) * 
+    sizeof(*lpszDeviceData));
+deviceData.pData = (PBYTE)lpszDeviceData;
+
+
+// Allocate and set the SERVICE_TRIGGER structure
+SERVICE_TRIGGER serviceTrigger = {0};
+serviceTrigger.dwTriggerType = 
+    SERVICE_TRIGGER_TYPE_DEVICE_INTERFACE_ARRIVAL;
+serviceTrigger.dwAction = SERVICE_TRIGGER_ACTION_SERVICE_START;
+serviceTrigger.pTriggerSubtype = const_cast&lt;GUID*&gt;(
+    &GUID_DEVINTERFACE_DISK);
+serviceTrigger.cDataItems = 1;
+serviceTrigger.pDataItems = &deviceData;
+
+
+// Allocate and set the SERVICE_TRIGGER_INFO structure
+SERVICE_TRIGGER_INFO serviceTriggerInfo = {0};
+serviceTriggerInfo.cTriggers = 1;
+serviceTriggerInfo.pTriggers = &serviceTrigger;
+
+
+// Call ChangeServiceConfig2 with the SERVICE_CONFIG_TRIGGER_INFO level 
+// and pass to it the address of the SERVICE_TRIGGER_INFO structure
+return ChangeServiceConfig2(hService, SERVICE_CONFIG_TRIGGER_INFO, 
+    &serviceTriggerInfo);
+
+</pre>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p class="MsoListParagraphCxSpFirst" style="margin-left:54.0pt"><span style=""></span></p>
+<p class="MsoListParagraphCxSpLast" style="margin-left:72.0pt; text-indent:5.0pt">
+<span style=""><span style="">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">In the <span class="SpellE">SvcInstall</span> function of ServiceInstall.cpp, call
+<span class="SpellE">SupportServiceTriggerStart</span> and <span class="SpellE">
+SetServiceTriggerStartOnUSBArrival</span> / <span class="SpellE">SetServiceTriggerStartOnIPAddressArrival</span> to configure the service to trigger start if applicable.
+</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C&#43;&#43;</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span>
+</div>
+<span class="hidden">cplusplus</span>
+<pre class="hidden">
+if (SupportServiceTriggerStart())
+{
+    SetServiceTriggerStartOnUSBArrival(schService);
+    // [-or-]
+    SetServiceTriggerStartOnIPAddressArrival(schService);
+}
+
+</pre>
+<pre id="codePreview" class="cplusplus">
+if (SupportServiceTriggerStart())
+{
+    SetServiceTriggerStartOnUSBArrival(schService);
+    // [-or-]
+    SetServiceTriggerStartOnIPAddressArrival(schService);
+}
+
+</pre>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p class="MsoNormal"><span style=""></span></p>
+<p class="MsoListParagraph" style="margin-left:54.0pt"><span style="">Please note that, in the above code, the service handle (<span class="SpellE">schService</span>) must be opened or created with the SERVICE_CHANGE_CONFIG access permission:
+</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C&#43;&#43;</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span>
+</div>
+<span class="hidden">cplusplus</span>
+<pre class="hidden">
+SC_HANDLE schService = CreateService(
+    schSCManager,                   // SCManager database
+    SERVICE_NAME,                   // Name of service
+    SERVICE_DISPLAY_NAME,           // Name to display
+*        SERVICE_CHANGE_CONFIG,          // Desired access
+    SERVICE_WIN32_OWN_PROCESS,      // Service type
+    SERVICE_DEMAND_START,           // Start type
+    SERVICE_ERROR_NORMAL,           // Error control type
+    szPath,                         // Service's binary
+    NULL,                           // No load ordering group
+    NULL,                           // No tag identifier
+    SERVICE_DEPENDENCIES,           // Dependencies
+    SERVICE_ACCOUNT,                // Service running account
+    SERVICE_PASSWORD);              // Password of the account
+
+</pre>
+<pre id="codePreview" class="cplusplus">
+SC_HANDLE schService = CreateService(
+    schSCManager,                   // SCManager database
+    SERVICE_NAME,                   // Name of service
+    SERVICE_DISPLAY_NAME,           // Name to display
+*        SERVICE_CHANGE_CONFIG,          // Desired access
+    SERVICE_WIN32_OWN_PROCESS,      // Service type
+    SERVICE_DEMAND_START,           // Start type
+    SERVICE_ERROR_NORMAL,           // Error control type
+    szPath,                         // Service's binary
+    NULL,                           // No load ordering group
+    NULL,                           // No tag identifier
+    SERVICE_DEPENDENCIES,           // Dependencies
+    SERVICE_ACCOUNT,                // Service running account
+    SERVICE_PASSWORD);              // Password of the account
+
+</pre>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p class="MsoListParagraphCxSpFirst" style="margin-left:54.0pt"><span style=""></span></p>
+<p class="MsoListParagraphCxSpLast" style="margin-left:72.0pt; text-indent:5.0pt">
+<span style=""><span style="">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="">In the <span class="SpellE">SvcQueryConfig</span> function of ServiceInstall.cpp, query the service trigger start configuration.
+</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C&#43;&#43;</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span>
+</div>
+<span class="hidden">cplusplus</span>
+<pre class="hidden">
+BOOL fIsTriggerStart;
+GetServiceTriggerInfo(schService, &fIsTriggerStart);
+
+</pre>
+<pre id="codePreview" class="cplusplus">
+BOOL fIsTriggerStart;
+GetServiceTriggerInfo(schService, &fIsTriggerStart);
+
+</pre>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p class="MsoListParagraphCxSpFirst" style="margin-left:72.0pt"><span style=""></span></p>
+<p class="MsoListParagraphCxSpLast" style="margin-left:72.0pt"><span style="">Please note that the service handle (<span class="SpellE">schService</span>) must be opened with the SERVICE_QUERY_CONFIG access permission:
+</span></p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C&#43;&#43;</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span>
+</div>
+<span class="hidden">cplusplus</span>
+<pre class="hidden">
+SC_HANDLE schService = OpenService(schSCManager, SERVICE_NAME, 
+    SERVICE_QUERY_CONFIG);
+
+</pre>
+<pre id="codePreview" class="cplusplus">
+SC_HANDLE schService = OpenService(schSCManager, SERVICE_NAME, 
+    SERVICE_QUERY_CONFIG);
+
+</pre>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<p class="MsoListParagraph" style="margin-left:72.0pt"><span style=""></span></p>
+<h2>More Information</h2>
+<p class="MsoListParagraphCxSpFirst" style="text-indent:5.0pt"><a href="http://msdn.microsoft.com/en-us/library/dd405513(VS.85).aspx">MSDN: Service Trigger Events</a></p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:5.0pt"><a href="http://www.microsoft.com/downloads/details.aspx?familyid=1C333F06-FADB-4D93-9C80-402621C600E7&amp;displaylang=en">Windows 7 Training Kit For Developers</a></p>
+<p class="MsoListParagraphCxSpLast" style="text-indent:5.0pt"><a href="http://support.microsoft.com/kb/975425/en-us">KB: How to create a trigger-start Windows service in Windows 7</a>
+</p>
+<hr>
+<div><a href="http://go.microsoft.com/?linkid=9759640" style="margin-top:3px"><img alt="" src="description/95e3bc78-76ea-4f7c-8b0e-445ca740f249image.png">
+</a></div>
+
+</div>
+
+
+    </div>
+</body>
+</html>

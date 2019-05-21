@@ -1,5 +1,5 @@
 # [VC++ ADO参数查询](http://blog.chinaunix.net/uid-25958655-id-3961324.html)
-首先在我的sql server 2005 express中有test数据库：的一张表
+## 1、首先在我的sql server 2005 express中有test数据库：的一张表
 ```sql
 create table student
 
@@ -28,15 +28,15 @@ insert into student values(2,'李四',2,2,'1982-02-02 0:0:0');
 insert into student values(3,'王五',2,2,'1983-03-03 0:0:0');
 ```
 
-万事开头难，任何一种新技术对于初学者来说最重要的还是“入门”，掌握其要点。让我们来看看ADO数据库开发的基本流程吧！
+## 2、万事开头难，任何一种新技术对于初学者来说最重要的还是“入门”，掌握其要点。让我们来看看ADO数据库开发的基本流程吧！
 (1)初始化COM库，引入ADO库定义文件
 (2)用Connection对象连接数据库
 (3)利用建立好的连接，通过Connection、Command对象执行SQL命令，或利用Recordset对象取得结果记录集进行查询、处理。
 (4)使用完毕后关闭连接释放对象。
 
-一、新建一个MFC(.exe)工程,工程名Ado_Parameter，并按下一步在第二个页面选择基于对话框(Dialog based)的，完成。 然后在对话框设计页面加入一个列表控件(ListContrl ),设置它的”属性à查看à样式”为”排列”,并将列表控件CListCtrl m_ListCtrl成员相关联, 并加入一个”查询”按钮ID为”IDC_SELECT”.
+### 一、新建一个MFC(.exe)工程,工程名Ado_Parameter，并按下一步在第二个页面选择基于对话框(Dialog based)的，完成。 然后在对话框设计页面加入一个列表控件(ListContrl ),设置它的”属性à查看à样式”为”排列”,并将列表控件CListCtrl m_ListCtrl成员相关联, 并加入一个”查询”按钮ID为”IDC_SELECT”.
 
-二、用#import指令引入ADO类型库
+### 二、用#import指令引入ADO类型库
 
 　　为了引入ADO类型库，需要在项目的stdafx.h文件中加入如下（一行）#import语句：
 ```cpp
@@ -50,7 +50,7 @@ insert into student values(3,'王五',2,2,'1983-03-03 0:0:0');
 
  
 
-三、COM库的初始化
+### 三、COM库的初始化
 
 　　我们可以使用AfxOleInit()来初始化COM库，这项工作通常在CWinApp::InitInstance()的重载函数中完成，请看如下代码:
   ```cpp
@@ -66,7 +66,7 @@ if(!AfxOleInit())
 .....
 }
 ```
-四 然后就可以用3个智能指针了:_ConnectionPtr、_RecordsetPtr和_CommandPtr
+### 四 然后就可以用3个智能指针了:_ConnectionPtr、_RecordsetPtr和_CommandPtr
 
   首先:在BOOL CAdo_ParameterDlg::OnInitDialog() 函数里面向m_ListCtrl加入列,通过这种方法来设置列数
   ```cpp
@@ -83,7 +83,7 @@ if(!AfxOleInit())
     return true;
 }
 ```
-我的”查询”按钮的消息响应函数如下:
+### 我的”查询”按钮的消息响应函数如下:
 ```cpp
 void CAdo_ParameterDlg::OnSelect() 
 {
@@ -161,9 +161,9 @@ void CAdo_ParameterDlg::OnSelect()
 }
 ```
 代码段1和代码段2分别示例了两种字段类型的参数写法.
-运行结果可是有数据的,运行结果如图:
+### 运行结果可是有数据的,运行结果如图:
 ![Image text](25958655_13826180123m5M.jpg)
-转:  孙鑫VC++深入详解教程 第20章最后一讲数据库的
+### 转:  孙鑫VC++深入详解教程 第20章最后一讲数据库的
 http://blog.chinaunix.net/uid-25958655-id-3955222.html
 http://blog.chinaunix.net/uid-25958655-id-3949738.html 
 http://www.yesky.com/413/1839913_2.shtml 

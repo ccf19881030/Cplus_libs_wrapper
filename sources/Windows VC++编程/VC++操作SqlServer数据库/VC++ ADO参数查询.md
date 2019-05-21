@@ -163,8 +163,8 @@ void CAdo_ParameterDlg::OnSelect()
 代码段1和代码段2分别示例了两种字段类型的参数写法.
 ### 运行结果可是有数据的,运行结果如图:
 ![Image text](25958655_13826180123m5M.jpg)
-### 转:  孙鑫VC++深入详解教程 第20章最后一讲数据库的
-http://blog.chinaunix.net/uid-25958655-id-3955222.html
-http://blog.chinaunix.net/uid-25958655-id-3949738.html 
-http://www.yesky.com/413/1839913_2.shtml 
-http://www.xinfengit.com/200907/2167363.html
+## 转:  孙鑫VC++深入详解教程 第20章最后一讲数据库的
+* [http://blog.chinaunix.net/uid-25958655-id-3955222.html](http://blog.chinaunix.net/uid-25958655-id-3955222.html)
+* [http://blog.chinaunix.net/uid-25958655-id-3949738.html](http://blog.chinaunix.net/uid-25958655-id-3949738.html)
+* [http://www.yesky.com/413/1839913_2.shtml](http://www.yesky.com/413/1839913_2.shtml )
+* [http://www.xinfengit.com/200907/2167363.html](http://www.xinfengit.com/200907/2167363.html)

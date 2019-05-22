@@ -1,9 +1,11 @@
 ## 一、Apache Thrift 在Windows10系统下VS2017中的安装与开发
 ### 1、[Apache Thrift 在Windows下的安装与开发](https://blog.csdn.net/colouroo/article/details/38588297)
-### 2、[Windows 10 Visual Studio 2017 安装配置 Apache Thrift （C++）](http://www.cnblogs.com/49er/p/7193829.html)
-### 3、[Apache Thrift 在Windows下的安装与开发](https://www.cnblogs.com/lpxblog/p/5382007.html)
-### 4、[旭日东升-thrift配置——windows客户端与linux服务端通信（C++）](https://www.cnblogs.com/lpxblog/p/5381816.html)
-### 5、[Thrift在Windows及Linux平台下的安装和使用示例](https://www.cnblogs.com/lizhenghn/p/5247266.html)
+### 2、[Thrift官方安装手册（译）](https://blog.csdn.net/qq910894904/article/details/41132779)
+### 3、[Windows 10 Visual Studio 2017 安装配置 Apache Thrift （C++）](http://www.cnblogs.com/49er/p/7193829.html)
+### 4、[Apache Thrift 在Windows下的安装与开发](https://www.cnblogs.com/lpxblog/p/5382007.html)
+### 5、[旭日东升-thrift配置——windows客户端与linux服务端通信（C++）](https://www.cnblogs.com/lpxblog/p/5381816.html)
+### 6、[Thrift在Windows及Linux平台下的安装和使用示例](https://www.cnblogs.com/lizhenghn/p/5247266.html)
+### 7、[Thrift编译安装](http://itindex.net/detail/50786-thrift-thrift-编译)
 
 ## [VS2017编译thrift0.12.0记录](https://blog.csdn.net/SHIXINGYA/article/https://www.cnblogs.com/lpxblog/p/5381816.htmltails/89390308)
 ### 1、[http://thrift.apache.org/download](http://thrift.apache.org/download)

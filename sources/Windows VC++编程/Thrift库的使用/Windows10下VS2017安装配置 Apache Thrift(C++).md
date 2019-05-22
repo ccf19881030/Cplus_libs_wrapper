@@ -3,6 +3,7 @@
 ### 2、[Windows 10 Visual Studio 2017 安装配置 Apache Thrift （C++）](http://www.cnblogs.com/49er/p/7193829.html)
 ### 3、[Apache Thrift 在Windows下的安装与开发](https://www.cnblogs.com/lpxblog/p/5382007.html)
 ### 4、[旭日东升-thrift配置——windows客户端与linux服务端通信（C++）](https://www.cnblogs.com/lpxblog/p/5381816.html)
+### 5、[Thrift在Windows及Linux平台下的安装和使用示例](https://www.cnblogs.com/lizhenghn/p/5247266.html)
 
 ## [VS2017编译thrift0.12.0记录](https://blog.csdn.net/SHIXINGYA/article/https://www.cnblogs.com/lpxblog/p/5381816.htmltails/89390308)
 ### 1、[http://thrift.apache.org/download](http://thrift.apache.org/download)

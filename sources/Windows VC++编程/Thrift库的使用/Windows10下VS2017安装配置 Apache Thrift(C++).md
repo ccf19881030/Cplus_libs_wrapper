@@ -6,6 +6,7 @@
 ### 5、[旭日东升-thrift配置——windows客户端与linux服务端通信（C++）](https://www.cnblogs.com/lpxblog/p/5381816.html)
 ### 6、[Thrift在Windows及Linux平台下的安装和使用示例](https://www.cnblogs.com/lizhenghn/p/5247266.html)
 ### 7、[Thrift编译安装](http://itindex.net/detail/50786-thrift-thrift-编译)
+### 8、[http://thrift.apache.org/docs/install/](http://thrift.apache.org/docs/install/)
 
 ## [VS2017编译thrift0.12.0记录](https://blog.csdn.net/SHIXINGYA/article/https://www.cnblogs.com/lpxblog/p/5381816.htmltails/89390308)
 ### 1、[http://thrift.apache.org/download](http://thrift.apache.org/download)

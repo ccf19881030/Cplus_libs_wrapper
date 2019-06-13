@@ -147,9 +147,17 @@ int main(void)
 }
 ```
 ## 3.在Ubuntu18.10下编译安装libcurl，安装到/usr/local目录
+```shell
+sudo git clone https://github.com/curl/curl.git
+cd curl
+./configure --prefix=/usr/local/
+make
+make install
+```
+关于如何在Linux下编译安装libcurl,可参考[how to install curl and libcurl](https://curl.haxx.se/docs/install.html)
 ## 4.打开一个终端，进入源文件所在目录，编译ftpupload.c源代码，生成可执行文件ftpupload
 ```shell
-root@ubuntu:/home/username/Programming/GithubProjects/curl/docs/examples# gcc ftpuploadresume.c -o ftpuploadresume -I/usr/local/curl -L/usr/local/lib -lcurl
+root@ubuntu:/home/username/Programming/GithubProjects/curl/docs/examples# gcc ftpupload.c -o ftpupload -I/usr/local/curl -L/usr/local/lib -lcurl
 ```
 ## 5.运行ftpupload，将/tmp/uploadthis.txt文件上传到FTP服务器所在目录ftp://145.100.244.111/uploadDir/，并把上传的文件命名为：renamed-and-fine.txt
 ```shell

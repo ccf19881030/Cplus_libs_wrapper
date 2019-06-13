@@ -1,6 +1,8 @@
+## 1.在Windows7下创建一个FTP服务器
 在Windows7下创建FTP服务器，例如FTP服务器地址为：ftp://145.100.244.111/uploadDir/，远程访问的用户名和密码分别为：username和123456，
-使用libcurl库的一个FTP上传示例程序[ftpupload.c](https://curl.haxx.se/libcurl/c/ftpupload.html)，在此基础上修改FTP地址和远程服务器路径，用户名和密码，
-如下：
+
+## 2.使用libcurl库的一个FTP上传示例程序[ftpupload.c](https://curl.haxx.se/libcurl/c/ftpupload.html)，在此基础上修改FTP地址和远程服务器路径，用户名和密码，
+修改后的代码如下：
 ```cpp
 /***************************************************************************
  *                                  _   _ ____  _
@@ -144,3 +146,17 @@ int main(void)
   return 0;
 }
 ```
+## 3.在Ubuntu18.10下编译安装libcurl，安装到/usr/local目录
+## 4.打开一个终端，进入源文件所在目录，编译ftpupload.c源代码，生成可执行文件ftpupload
+```shell
+root@ubuntu:/home/username/Programming/GithubProjects/curl/docs/examples# gcc ftpuploadresume.c -o ftpuploadresume -I/usr/local/curl -L/usr/local/lib -lcurl
+```
+## 5.运行ftpupload，将/tmp/uploadthis.txt文件上传到FTP服务器所在目录ftp://145.100.244.111/uploadDir/，并把上传的文件命名为：renamed-and-fine.txt
+```shell
+root@ubuntu:/home/havealex/Programming/GithubProjects/curl/docs/examples# ./ftpupload
+Local file size: 307476 bytes.
+*** We read 65536 bytes from file
+*** We read 65536 bytes from file
+*** We read 65536 bytes from file
+*** We read 65536 bytes from file
+*** We read 45332 bytes from file

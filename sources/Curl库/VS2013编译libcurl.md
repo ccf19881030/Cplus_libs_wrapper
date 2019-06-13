@@ -1,4 +1,6 @@
 ## [VS2013编译libcurl](https://www.cnblogs.com/foohack/p/4953156.html)
+## [VS2013编译libcurl静态库和动态库](http://blog.chinaunix.net/uid-20698826-id-5765696.html)
+## [VS2015编译libcurl](https://www.jianshu.com/p/f82d3d18da93?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation)
 首先从这里下载libcurl的package：[http://curl.haxx.se/libcurl/](http://curl.haxx.se/libcurl/)
 
 然后解压，里面有个winbuild文件夹，这里是为windows构建工程的文件夹。里面有nmake的makefile。调出VS2013的x86 Native Command prommpt。然后

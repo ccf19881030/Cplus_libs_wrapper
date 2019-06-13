@@ -1,6 +1,6 @@
 ## 1.在Windows7下创建一个FTP服务器
 在Windows7下创建FTP服务器，例如FTP服务器地址为：ftp://145.100.244.111/uploadDir/，远程访问的用户名和密码分别为：username和123456，
-
+可参考[win7下如何建立ftp服务器](https://jingyan.baidu.com/article/574c5219d466c36c8d9dc138.html)
 ## 2.使用libcurl库的一个FTP上传示例程序[ftpupload.c](https://curl.haxx.se/libcurl/c/ftpupload.html)，在此基础上修改FTP地址和远程服务器路径，用户名和密码，
 修改后的代码如下：
 ```cpp

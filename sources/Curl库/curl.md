@@ -1,6 +1,9 @@
 ### curl
 #### curl / Download
      [curl Releases and Downloads](https://curl.haxx.se/download.html)
+#### [libcurl programming tutorial](https://curl.haxx.se/libcurl/c/libcurl-tutorial.html)
+#### [Easy interface overview](https://curl.haxx.se/libcurl/c/libcurl-easy.html)
+#### [multi interface overview-libcurl-multi - how to use the multi interface](https://curl.haxx.se/libcurl/c/libcurl-multi.html)
 #### [libcurl - client-side URL transfers](https://curl.haxx.se/libcurl/c/libcurl.html)
 #### [curl 7.64.1 for Windows](https://curl.haxx.se/windows/)
 #### [The libcurl API](https://curl.haxx.se/libcurl/c/)

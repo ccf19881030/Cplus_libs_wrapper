@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NaiveApproach", "NaiveApproach\NaiveApproach.vcproj", "{8E69CEE2-D81A-49E4-992C-22AC4AD9D12D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "User", "User\User.vcproj", "{35F706D4-7656-4F8D-BE3D-AABD7A4FE1CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E69CEE2-D81A-49E4-992C-22AC4AD9D12D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8E69CEE2-D81A-49E4-992C-22AC4AD9D12D}.Debug|Win32.Build.0 = Debug|Win32
+		{8E69CEE2-D81A-49E4-992C-22AC4AD9D12D}.Release|Win32.ActiveCfg = Release|Win32
+		{8E69CEE2-D81A-49E4-992C-22AC4AD9D12D}.Release|Win32.Build.0 = Release|Win32
+		{35F706D4-7656-4F8D-BE3D-AABD7A4FE1CB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{35F706D4-7656-4F8D-BE3D-AABD7A4FE1CB}.Debug|Win32.Build.0 = Debug|Win32
+		{35F706D4-7656-4F8D-BE3D-AABD7A4FE1CB}.Release|Win32.ActiveCfg = Release|Win32
+		{35F706D4-7656-4F8D-BE3D-AABD7A4FE1CB}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

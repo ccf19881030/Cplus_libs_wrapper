@@ -1,0 +1,4 @@
+LIBRARY	"wuygDll"
+EXPORTS
+wuygFun @ 1
+

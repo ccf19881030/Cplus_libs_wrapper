@@ -1,0 +1,11 @@
+//2011.10.6
+//cswuyg
+//dll导出class，比较差劲的方式
+NaiveApproach  ： dll
+User           ： dll使用者
+
+编程环境：windows、VS2005
+
+User工程：Additional Include Directories ： ..\NaiveApproach
+（工程右键--》properties--》C/C++--》Gerneral……）
+

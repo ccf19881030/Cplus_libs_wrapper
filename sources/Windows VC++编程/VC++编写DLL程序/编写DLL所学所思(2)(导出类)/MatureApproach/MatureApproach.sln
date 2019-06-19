@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MatureApproach", "MatureApproach\MatureApproach.vcproj", "{3D315381-787B-43BA-A430-8E7D9B7A16AF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "User", "User\User.vcproj", "{F3C2BA6B-A86A-4B20-A66D-E041CA7F919E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D315381-787B-43BA-A430-8E7D9B7A16AF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3D315381-787B-43BA-A430-8E7D9B7A16AF}.Debug|Win32.Build.0 = Debug|Win32
+		{3D315381-787B-43BA-A430-8E7D9B7A16AF}.Release|Win32.ActiveCfg = Release|Win32
+		{3D315381-787B-43BA-A430-8E7D9B7A16AF}.Release|Win32.Build.0 = Release|Win32
+		{F3C2BA6B-A86A-4B20-A66D-E041CA7F919E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F3C2BA6B-A86A-4B20-A66D-E041CA7F919E}.Debug|Win32.Build.0 = Debug|Win32
+		{F3C2BA6B-A86A-4B20-A66D-E041CA7F919E}.Release|Win32.ActiveCfg = Release|Win32
+		{F3C2BA6B-A86A-4B20-A66D-E041CA7F919E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,19 @@
+//2011.10.6
+//cswuyg
+//dll导出类比较好的方式
+
+MatureApproach文件夹 ： dll
+    ExportClassImpl.h   :   导出类的实现
+    MatureApproach.h    :   DLL头文件（跟user共用）
+
+User文件夹           ： dll使用者
+
+
+
+编程环境：windows、VS2005
+
+User工程：Additional Include Directories ：../MatureApproach
+（工程右键--》properties--》C/C++--》Gerneral……）
+
+
+

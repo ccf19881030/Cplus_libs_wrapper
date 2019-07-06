@@ -1,0 +1,6 @@
+## [VC++DLL动态链接库编程](https://study.163.com/course/courseMain.htm?courseId=1003586013)
+### [课时1-课程介绍](https://study.163.com/course/courseMain.htm?courseId=1003586013)
+### [课时2-DLL动态库的原理讲解](https://study.163.com/course/courseLearn.htm?courseId=1003586013#/learn/video?lessonId=1004088362&courseId=1003586013)
+### [课时3-VC++静态库编译](https://study.163.com/course/courseLearn.htm?courseId=1003586013#/learn/video?lessonId=1004086375&courseId=1003586013)
+### [课时4-DLL动态链接库创建](https://study.163.com/course/courseLearn.htm?courseId=1003586013#/learn/video?lessonId=1004087388&courseId=1003586013)
+### [课时5-直接通过代码访问DLL中的函数](https://study.163.com/course/courseLearn.htm?courseId=1003586013#/learn/video?lessonId=1004090372&courseId=1003586013)

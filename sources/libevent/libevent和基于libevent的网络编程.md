@@ -1,0 +1,11 @@
+## [libevent和基于libevent的网络编程](https://www.cnblogs.com/nearmeng/p/4043548.html)
+[1] http://www.ibm.com/developerworks/cn/aix/library/au-libev/
+[2] http://wenku.baidu.com/link?url=RmSm9M9mc4buqB_j6BGou5GxgyAn14lif18UUsQ8gr7pClAKGJr3civ8-DM0Xrpv4MdVIajykzbg34ZbGjGEizL8fOYE-EOKAATZIV06qwa
+[3] http://blog.csdn.net/mafuli007/article/details/7476014
+[4] http://blog.csdn.net/sparkliang/article/details/4957667
+[5] http://bbs.chinaunix.net/thread-4118501-1-1.html
+[6] http://bbs.chinaunix.net/thread-3776236-1-1.html
+[7] http://www.zhihu.com/question/20114168
+[8] http://www.zhihu.com/question/21516827
+[9] http://www.wangafu.net/~nickm/libevent-2.0/doxygen/html/
+[10] [Libevent中文参考手册](https://dl.dropboxusercontent.com/u/3471930/Blog/libevent%E4%B8%AD%E6%96%87%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C.pdf)

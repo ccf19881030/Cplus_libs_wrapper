@@ -1,3 +1,4 @@
+## [基于TCP通信的客户端断线重连](https://www.cnblogs.com/51net/p/4316551.html)
 ## [关于socket tcp 断线重连](https://www.cnblogs.com/zhangdongsheng/p/4817625.html)
 这个问题困扰过我几次，都没有来得及研究，今天研究一下。
 

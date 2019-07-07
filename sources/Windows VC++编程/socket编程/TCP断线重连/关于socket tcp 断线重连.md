@@ -1,4 +1,6 @@
 ## [基于TCP通信的客户端断线重连](https://www.cnblogs.com/51net/p/4316551.html)
+## [TcpClient和TcpListener断开自动重连](https://blog.csdn.net/heyangyi_19940703/article/details/53672910)
+## [QT 中Socket客户端与服务器异常断开后重连](https://blog.csdn.net/lms1008611/article/details/81507161)
 ## [关于socket tcp 断线重连](https://www.cnblogs.com/zhangdongsheng/p/4817625.html)
 这个问题困扰过我几次，都没有来得及研究，今天研究一下。
 

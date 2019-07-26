@@ -1,5 +1,12 @@
-## [A Thread Pool with Boost.Threads and Boost.Asio](http://progsch.net/wordpress/?p=71)
 ## [Jakob's Devlog](http://progsch.net/wordpress/?author=1)
+## [threadpool 0.2.5](http://threadpool.sourceforge.net)
+### [threadpool 0.2.5下载](https://sourceforge.net/projects/threadpool/files/threadpool/0.2.5%20%28Stable%29/threadpool-0_2_5-src.zip/download?use_mirror=jaist&download=)
+threadpool is a cross-platform C++ thread pool library. In general terms thread pools are an efficient mechanism for asynchronous task processing within the same process. They realise the thread pool pattern.
+A thread pool manages a group of threads in order to process a large number of tasks. Since multiple threads can be executed in parallel this approach may be very efficient regarding the overall program performance on many computer systems. By restricting the number of threads and by reusing them resources are saved and additionally the system stability is increased.
+
+The threadpool library provides a convenient way for dispatching asynchronous tasks. Pools can be customized, managed dynamically and easily integrated into your software.
+
+## [A Thread Pool with Boost.Threads and Boost.Asio](http://progsch.net/wordpress/?p=71)
 After spending some time being frustrated with the C++11 async/future stuff (not sure if i’m too dumb or the implementations aren’t that great yet), I dug up some old code and found this nice way of doing a thread pool with Boost.Threads (obviously) and Boost.Asio. Since the code is actually pretty short for what it does I’ll just dump it here:
 ```cpp
 #include <boost/thread/thread.hpp>

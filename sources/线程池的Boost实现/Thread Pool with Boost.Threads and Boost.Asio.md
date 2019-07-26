@@ -1,4 +1,5 @@
 ## [Jakob's Devlog](http://progsch.net/wordpress/?author=1)
+## [C++ 并发编程（四）：基于 Asio 的线程池](https://segmentfault.com/a/1190000006691692)
 ## [threadpool 0.2.5](http://threadpool.sourceforge.net)
 ### [threadpool 0.2.5下载](https://sourceforge.net/projects/threadpool/files/threadpool/0.2.5%20%28Stable%29/threadpool-0_2_5-src.zip/download?use_mirror=jaist&download=)
 threadpool is a cross-platform C++ thread pool library. In general terms thread pools are an efficient mechanism for asynchronous task processing within the same process. They realise the thread pool pattern.

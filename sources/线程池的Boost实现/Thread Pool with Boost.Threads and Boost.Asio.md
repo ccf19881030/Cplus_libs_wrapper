@@ -1,4 +1,5 @@
 ## [A Thread Pool with Boost.Threads and Boost.Asio](http://progsch.net/wordpress/?p=71)
+## [Jakob's Devlog](http://progsch.net/wordpress/?author=1)
 After spending some time being frustrated with the C++11 async/future stuff (not sure if i’m too dumb or the implementations aren’t that great yet), I dug up some old code and found this nice way of doing a thread pool with Boost.Threads (obviously) and Boost.Asio. Since the code is actually pretty short for what it does I’ll just dump it here:
 ```cpp
 #include <boost/thread/thread.hpp>

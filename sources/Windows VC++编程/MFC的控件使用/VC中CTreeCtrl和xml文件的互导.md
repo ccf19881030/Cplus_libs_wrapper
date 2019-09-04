@@ -16,3 +16,5 @@ http://leethomason.github.io/tinyxml2/
 https://sourceforge.net/projects/tinyxml/postdownload
 
 https://sourceforge.net/projects/tinyxml/
+
+## [ C#读取XML文件，反序列化为指定对象 ](https://blog.csdn.net/q646926099/article/details/52400320)

@@ -251,6 +251,35 @@ if (entId.isValid())
     aryEntityId.append(entId);
 }
 ```
+
+### [MFC中CTreeCtrl右击选中节点并弹出右击菜单](https://blog.csdn.net/lvecc/article/details/20461019)
+1.在父窗口响应NM_RCLICK消息
+2.在NM_RCLICK消息响应函数中添加：
+```cpp
+void CDlgIndicatorsTree::OnRclickTreeindicators(NMHDR *pNMHDR, LRESULT *pResult)
+{
+    // TODO: 在此添加控件通知处理程序代码
+    *pResult = 0;
+    CPoint pt   ;//用于获取CTreeCtrl右击点在CTreeCtrl的坐标 这里主要因为CTreeCtrl的点击测试的坐标点是基于自身坐标系 （HitTest为CTreeCtrl的成员函数）
+
+    CPoint ptSc ;//右击菜单的右上角的位置是基于屏幕坐标系  
+    UINT  flag;
+    GetCursorPos(&pt); //获取当前点击坐标的全局坐标 
+    ptSc =  pt;
+    ScreenToClient(&pt);
+
+    MapWindowPoints(&m_treeIndicators,&pt,1);//MapWindowPoint  为父类（CDialog）的成员函数,  将坐标系映射为CTreeCtrl的坐标系
+
+    HTREEITEM hItem  = m_treeIndicators.HitTest(pt,&flag) ;
+    if(NULL != hItem){
+        m_treeIndicators.Select(hItem,TVGN_CARET);//设置点击节点为当前选中节点
+        CMenu m,*mn;
+        m.LoadMenu(IDR_INDIEDIT);//加载菜单资源
+        mn = m.GetSubMenu(0);//获取菜单子项
+        mn->TrackPopupMenu(TPM_LEFTALIGN,ptSc.x,ptSc.y,this);    //显示菜单
+    }
+}
+```
 ## CTreeView 类
 ### [CTreeView 类](https://docs.microsoft.com/zh-cn/cpp/mfc/reference/ctreeview-class?view=vs-2019)
 ### [CTreeCtrl 与CTreeView](https://docs.microsoft.com/zh-cn/cpp/mfc/ctreectrl-vs-ctreeview?view=vs-2019)

@@ -280,6 +280,32 @@ void CDlgIndicatorsTree::OnRclickTreeindicators(NMHDR *pNMHDR, LRESULT *pResult)
     }
 }
 ```
+### [mfc ctreectrl遍历所有节点](https://blog.csdn.net/XuePiaoFei1/article/details/47093635)
+遍历节点，并取得节点文本：
+其中  m_vecTreeNode是CDlgTree成员变量（vector<string>  m_vecTreeNode），将所有节点文本保存。
+由于使用多字符集，所以可以
+如果使用Unicode，参考[http://blog.csdn.net/xuepiaofei1/article/details/47093375](http://blog.csdn.net/xuepiaofei1/article/details/47093375)
+```cpp
+//传入的ht是根节点
+void CDlgTree::TravelAll(HTREEITEM ht)
+{
+ 
+	string strTemp;
+	CString cstr = m_wndTree.GetItemText(ht);
+	strTemp = cstr.GetBuffer(0);
+	HTREEITEM hCurItem = m_wndTree.GetChildItem(ht);
+	
+	m_vecTreeNode.push_back(strTemp);
+ 
+	HTREEITEM hNextItem;
+	while(hCurItem)
+	{
+		hNextItem = hCurItem;
+		TravelAll(hNextItem);
+		hCurItem = m_wndTree.GetNextSiblingItem(hCurItem);
+	}
+}
+```
 ## CTreeView 类
 ### [CTreeView 类](https://docs.microsoft.com/zh-cn/cpp/mfc/reference/ctreeview-class?view=vs-2019)
 ### [CTreeCtrl 与CTreeView](https://docs.microsoft.com/zh-cn/cpp/mfc/ctreectrl-vs-ctreeview?view=vs-2019)

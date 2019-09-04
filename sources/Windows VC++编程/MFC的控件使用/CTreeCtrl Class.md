@@ -306,6 +306,129 @@ void CDlgTree::TravelAll(HTREEITEM ht)
 	}
 }
 ```
+
+### [MFC树形控件CTreeCtrl使用方法、遍历、SetCheck无效、根据名称获取节点、获取选中节点等问题](https://blog.csdn.net/shenhch/article/details/78606033)
+#### 1.新建树形控件 
+（1）、直接在MFC工具中拖入控件，然后增加成员变量CTreeCtrl m_Tree; 
+（2）、动态创建 
+CTreeCtrl::Create
+```cpp
+    BOOL Create( DWORD dwStyle, const RECT& rect, CWnd* pParentWnd, UINT nID );
+    返回值：如果初始化成功则返回非零值；否则返回0
+    参数说明
+    dwStyle：指定tree view控件的风格。可以对这个控件使用tree view控件风格的任意组合。
+    rect：   指定tree view控件的尺寸和位置。此参数可以是一个CRect对象或一个RECT结构。
+    pParentWnd：指定tree view控件的父窗口，通常是一个CDialog。它不能是NULL。
+    nID：指定tree view控件的ID。
+   风格说明：
+      TVS_HASLINES tree view控件的子项与它们的父项之间用线连接。
+      TVS_LINESATROOT tree view控件用线连接子项和根项。
+      TVS_HASBUTTONS tree view在每一个父项的左边添加一个按钮。
+      TVS_EDITLABELS tree view控件允许用户编辑tree view项的标签。
+      TVS_SHOWSELALWAYS 当tree view失去焦点时，使被选择的项仍然保持被选择
+      TVS_DISABLEDRAGDROP 该tree view控件被禁止发送TVN_BEGINDRAG通知消息。
+      TVS_NOTOOLTIPS tree view控件使用工具提示。
+      TVS_SINGLEEXPAND 当使用这个风格时，改变在tree view中的选择将导致正被选择的项展开，而没有被选择的项收缩。如果用鼠标单击被选择的项，并且该项是关闭的，则该项就会展开。如果该被选择的项被单击时是打开的，则它就会收缩。
+```
+#### 2、插入节点
+```cpp
+    HTREEITEM hRoot;     // 树的根节点的句柄   
+    HTREEITEM hCataItem; // 可表示任一分类节点的句柄
+    hRoot = m_Tree.InsertItem(_T("Root"),0,0);
+    for(int i=0; i < 5; i++)
+    {
+         CString str;
+         str.Format(_T("Item%d"),i+1);
+         hCataItem = m_Tree.InsertItem(str, 1, 1, hRoot, TVI_LAST);         
+    }   
+```
+#### 3、获取选中节点名称
+```cpp
+void GetCheckNode( HTREEITEM hRoot )
+{
+    // 如果不是叶子节点
+    if(TRUE == m_Tree.ItemHasChildren(hRoot))
+    {
+        if(TRUE == m_Tree.GetCheck(hRoot))
+        {
+            // 插入所有页节点
+            InsertAllLeaves(hRoot);
+        }
+        else
+        {
+            // 查询所有节点，递归
+            HTREEITEM hChild = m_Tree.GetChildItem(hRoot);
+            while(NULL != hChild)
+            {
+                GetCheckNode(hChild);
+                hChild = m_Tree.GetNextSiblingItem(hChild);
+            }
+        }
+    }
+    else // 是叶子节点
+    {
+        // 被选中
+        if(TRUE == m_tTree.GetCheck(hRoot))
+        {
+            CString well = m_Tree.GetItemText(hRoot);
+        }
+    }
+}
+
+
+void InsertAllLeaves( HTREEITEM hRoot )
+{
+    HTREEITEM hChild = m_Tree.GetChildItem(hRoot);
+    while(NULL != hChild)
+    {
+        if(TRUE == m_Tree.ItemHasChildren(hChild))
+        {
+            InsertAllLeaves(hChild);
+        }
+        else
+        {
+            CString well = m_Tree.GetItemText(hChild);
+        }
+        hChild = m_Tree.GetNextSiblingItem(hChild);
+    }
+}
+```
+#### 4、根据名称查找节点
+```cpp
+HTREEITEM  finditem(HTREEITEM  item, CString strtext)   
+{  
+    HTREEITEM  hfind;  
+    //空树，直接返回NULL
+    if(item ==  NULL)  
+        return  NULL;  
+    //遍历查找
+    while(item!=NULL)  
+    {  
+        //当前节点即所需查找节点
+        if(m_Tree.GetItemText(item) == strtext)  
+            return   item;  
+        //查找当前节点的子节点
+        if(m_Tree.ItemHasChildren(item))  
+        {  
+            item   =   m_Tree.GetChildItem(item); 
+            //递归调用查找子节点下节点
+            hfind   =   finditem(item,strtext); 
+            if(hfind)  
+            {  
+                return  hfind;  
+            }  
+            else   //子节点中未发现所需节点，继续查找兄弟节点
+            {
+                item = m_Tree.GetNextSiblingItem(m_ShowObjectTree.GetParentItem(item));  
+            }
+        }  
+        else{   //若无子节点，继续查找兄弟节点
+            item = m_Tree.GetNextSiblingItem(item);  
+        }  
+    }  
+    return item;  
+}
+```
 ## CTreeView 类
 ### [CTreeView 类](https://docs.microsoft.com/zh-cn/cpp/mfc/reference/ctreeview-class?view=vs-2019)
 ### [CTreeCtrl 与CTreeView](https://docs.microsoft.com/zh-cn/cpp/mfc/ctreectrl-vs-ctreeview?view=vs-2019)

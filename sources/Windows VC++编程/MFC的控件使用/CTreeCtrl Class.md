@@ -46,6 +46,39 @@ void CViewTree::OnClkTree(NMHDR* pNMHDR, LRESULT* pResult)
 }
 ```
 ### [CTreeCtrl应用控件技巧-创建/编辑Edit/API的详细使用(代码详细介绍)](https://blog.csdn.net/fantuanxiaot/article/details/76147580)
+### [获取CTreeCtrl所有结点的附加数据(ItemData)](https://blog.csdn.net/wennuan80/article/details/52839618)
+```cpp
+vector<DWORD_PTR> GetTreeCtrlAllNodeItemData(CTreeCtrl& _ctrl)
+{
+	vector<DWORD_PTR> lstItmData;
+	HTREEITEM hItem=_ctrl.GetRootItem();
+	DWORD_PTR itmData = NULL;
+ 
+	if (NULL == hItem)
+	{
+		return lstItmData;
+	}
+	
+	do
+	{
+		itmData = _ctrl.GetItemData(hItem);
+		lstItmData.push_back(itmData);
+A:
+		if (_ctrl.ItemHasChildren(hItem))
+		{
+			hItem=_ctrl.GetChildItem(hItem);
+			itmData = _ctrl.GetItemData(hItem);
+			lstItmData.push_back(itmData);
+			do
+			{
+				goto A;
+			} while(hItem=_ctrl.GetNextSiblingItem(hItem));
+		}
+	} while(hItem=_ctrl.GetNextSiblingItem(hItem));
+ 
+	return lstItmData;
+}
+```
 
 ## CTreeView 类
 ### [CTreeView 类](https://docs.microsoft.com/zh-cn/cpp/mfc/reference/ctreeview-class?view=vs-2019)

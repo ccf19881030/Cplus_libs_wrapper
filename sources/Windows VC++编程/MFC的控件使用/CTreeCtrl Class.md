@@ -79,7 +79,178 @@ A:
 	return lstItmData;
 }
 ```
+### [CTreeCtrl树控件：如何给MFC中的CTreeCtrl树控件添加右键菜单及使用](https://blog.csdn.net/m0_37251750/article/details/81235628)
+#### 1、头文件中：
+```cpp
+// 可以用来屏蔽操作的消息
+virtual BOOL PreTranslateMessage(MSG* pMsg);
 
+// 右击树控件的节点弹出菜单
+afx_msg void OnRclickTreeObjects(NMHDR* pNMHDR, LRESULT* pResult);
+
+//展开树控件某一结点下的所有子节点（递归函数）
+void ExpandAllTreeItem(HTREEITEM hTreeItem);
+
+// 获取树节点的等级
+int GetItemLevel(HTREEITEM hItem);
+
+CTreeCtrl m_objectsTreeCtrl;
+```
+#### 2、源文件中：
+```cpp
+#define  IDM_TREEUPDATE 10001
+#define IDM_TREEDELETE 10002
+
+BEGIN_MESSAGE_MAP(CObjectsDialog, CAcUiDialog)
+    //{{AFX_MSG_MAP(CObjectsDialog)
+    ON_WM_SIZE()
+    ON_WM_TIMER()
+    ON_NOTIFY(NM_RCLICK, IDC_TREE_OBJECTS, &CObjectsDialog::OnRclickTreeObjects)
+    ON_NOTIFY(TVN_SELCHANGED, IDC_TREE_OBJECTS, &CObjectsDialog::OnTvnSelchangedObjectsTree)
+    ON_COMMAND(IDM_TREEUPDATE, &CObjectsDialog::OnUpdataSection)
+    ON_COMMAND(IDM_TREEDELETE, &CObjectsDialog::OnDeleteSection)
+    //}}AFX_MSG_MAP
+END_MESSAGE_MAP()
+
+
+BOOL CObjectsDialog::PreTranslateMessage(MSG* pMsg)
+{
+    if (pMsg->message == WM_KEYDOWN)
+    {
+        // 屏蔽ESC和回车键
+        if (pMsg->wParam == VK_ESCAPE || pMsg->wParam == VK_RETURN)
+        {
+            return TRUE;
+        }
+    }
+
+    return CAcUiDialog::PreTranslateMessage(pMsg);
+}
+
+BOOL CObjectsDialog::OnInitDialog()
+{
+    CAcUiDialog::OnInitDialog();
+    m_objectsTreeCtrl.ModifyStyle(NULL, TVS_HASLINES | TVS_LINESATROOT);
+    CString strItemTunnel = _T("根节点");
+    HTREEITEM htItem = m_objectsTreeCtrl.InsertItem(strItemTunnel, TVI_ROOT, TVI_FIRST);
+    CString strTunnel = _T("节点1");
+    HTREEITEM htRoomChild = m_objectsTreeCtrl.InsertItem(strTunnel, htItem);
+
+    ExpandAllTreeItem(htItem );
+
+    return TRUE;
+}
+
+void CObjectsDialog::OnRclickTreeObjects(NMHDR* pNMHDR, LRESULT* pResult) 
+{
+    // TODO: Add your control notification handler code here
+    if (curDoc() == NULL)
+    {
+        return;
+    }
+
+    CPoint point;
+    GetCursorPos(&point);
+    CPoint pointInTree = point;
+    m_objectsTreeCtrl.ScreenToClient(&pointInTree);
+
+    HTREEITEM item;
+    UINT flag = TVHT_ONITEM;
+    item = m_objectsTreeCtrl.HitTest(pointInTree, &flag);
+
+    if(item == NULL)
+    {
+        return;
+    }
+
+    m_objectsTreeCtrl.SelectItem(item);
+
+    int nLevel = GetItemLevel(item);
+    CString strItemName = m_objectsTreeCtrl.GetItemText(item);
+    if (nLevel == 1)
+    {
+        CMenu menu;
+        menu.CreatePopupMenu();
+        menu.AppendMenu(MF_STRING, IDM_TREEUPDATE, _T("更新大样图"));
+        menu.AppendMenu(MF_STRING, IDM_TREEDELETE, _T("删除大样图"));
+        menu.TrackPopupMenu(TPM_LEFTALIGN | TPM_RIGHTBUTTON, point.x, point.y, this, NULL);
+        menu.DestroyMenu();
+    }
+    else if (nLevel == 2)
+    {
+        CMenu menu;
+        menu.CreatePopupMenu();
+        menu.AppendMenu(MF_STRING, IDM_TREEUPDATE, _T("更新大样图"));
+        menu.AppendMenu(MF_STRING, IDM_TREEDELETE, _T("删除大样图"));
+        menu.TrackPopupMenu(TPM_LEFTALIGN | TPM_RIGHTBUTTON, point.x, point.y, this, NULL);
+        menu.DestroyMenu();
+    }
+    else
+    {
+        return;
+    }
+
+    *pResult = 1;
+}
+
+void CObjectsDialog::OnUpdataSection()
+{
+    HTREEITEM hItem = m_objectsTreeCtrl.GetSelectedItem();
+    if (!hItem)
+    {
+        return;
+    }
+
+    int nLevel = GetItemLevel(hItem);
+
+    if (1 == nLevel)
+    {
+
+    }
+}
+
+void CObjectsDialog::ExpandAllTreeItem(HTREEITEM hTreeItem)
+{
+    if(!m_objectsTreeCtrl.ItemHasChildren(hTreeItem))
+    {
+        return;
+    }
+    //若树控件的根节点有子节点则获取根节点的子节点
+    HTREEITEM hNextItem = m_objectsTreeCtrl.GetChildItem(hTreeItem);
+
+    while (hNextItem)
+    {
+        //递归，展开子节点下的所有子节点
+        ExpandAllTreeItem(hNextItem);
+        hNextItem = m_objectsTreeCtrl.GetNextItem(hNextItem, TVGN_NEXT);
+    }
+    m_objectsTreeCtrl.Expand(hTreeItem,TVE_EXPAND);
+}
+
+int CObjectsDialog::GetItemLevel(HTREEITEM hItem)
+{
+    int nIndex = 0;
+    while (hItem)
+    {
+        hItem = m_objectsTreeCtrl.GetParentItem(hItem);
+        nIndex++;
+    }
+    return nIndex;
+}
+
+// 为树节点绑定数据和获取数据
+HTREEITEM htRoomChild = m_objectsTreeCtrl.InsertItem(strTunnel, 1, 1, htItem);
+LONG_PTR tunnelId = idTunnel.asOldId();
+m_objectsTreeCtrl.SetItemData(htRoomChild, tunnelId);
+
+LONG_PTR objId = m_objectsTreeCtrl.GetItemData(htRoomChild );
+AcDbObjectId entId;
+entId.setFromOldId(objId);
+if (entId.isValid())
+{
+    aryEntityId.append(entId);
+}
+```
 ## CTreeView 类
 ### [CTreeView 类](https://docs.microsoft.com/zh-cn/cpp/mfc/reference/ctreeview-class?view=vs-2019)
 ### [CTreeCtrl 与CTreeView](https://docs.microsoft.com/zh-cn/cpp/mfc/ctreectrl-vs-ctreeview?view=vs-2019)

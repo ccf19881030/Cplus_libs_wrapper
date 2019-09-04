@@ -51,7 +51,7 @@ To Add a handler for Selection Change:
     Go to the Message maps tab
     Select the Tree control on the left side object IDs list box and select TVN_SELCHANGED on the right Messages List box.
     Click Add function and go to the function.
-
+    
 The following sample shows a Message box whenever there
 occurs a selection change event in the Tree control.
 ```cpp

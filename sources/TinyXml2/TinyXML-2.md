@@ -15,6 +15,6 @@ https://sourceforge.net/projects/tinyxml/postdownload
 https://sourceforge.net/projects/tinyxml/
 
 ## [TinyXML + VS2010项目配置 使用TinyXML类创建XML文件](https://www.xuebuyuan.com/1363695.html)
-### [TinyXml Documentation 2.6.0](http://www.grinninglizard.com/tinyxmldocs/index.html)
+### [TinyXml-2 Documentation 7.0.0](http://leethomason.github.io/tinyxml2/)
 
 ## [tinyxml2 Github Code](https://github.com/leethomason/tinyxml2)

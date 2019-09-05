@@ -1,6 +1,6 @@
 ## [C++:tinyxml的使用](https://www.cnblogs.com/whlook/p/7117306.html)
 ### 1. 简介
-TinyXML2(最新版本)是一个开源的功能齐全的XML解析库 For C++，源码见：github。
+TinyXML2(最新版本)是一个开源的功能齐全的XML解析库 For C++，源码见：[github](https://github.com/leethomason/tinyxml2)。
 
 ### 2. 开始使用
 首先从Github上获得源码，是一个完整的演示工程，我们只需要其中的tinyxml2.cpp和tinyxml2.h，将这两个文件拷贝到新建的VS工程目录下，然后就可以开始使用了，这是方法之一，也可以将源码编译为.lib然后链接到工程中。

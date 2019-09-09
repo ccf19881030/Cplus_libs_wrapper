@@ -453,6 +453,41 @@ void CMenuCreatDlg::MyExpandTree(HTREEITEM hTreeItem)
 }  
 ```
 
+### 6、获取CTreeCtrl控件中某个节点的深度(起始深度序号从1开始)
+```cpp
+// 获取CTreeCtrl控件中某个子节点的层数
+// 通过找Parent的方法判断是第几层树
+int GetDepth(HTREEITEM hItem)
+{
+	int level = 0;
+	HTREEITEM hItemTmp;
+	hItemTmp = hItem;
+	while (hItemTmp != NULL)
+	{
+		hItemTmp = m_xmlTreeCtrl.GetParentItem(hItemTmp);
+		++level;
+	}
+
+	return level;
+}
+```
+
+### 7、获取CTreeCtrl控件中某个节点所在兄弟节点的编号(起始序号从1开始)
+```cpp
+int GetSiblingNumber(HTREEITEM hTreeItem)
+{
+	int nCount = 0;
+
+	while (hTreeItem)
+	{
+		hTreeItem = m_xmlTreeCtrl.GetPrevSiblingItem(hTreeItem);
+		nCount++;
+	}
+
+	return nCount;
+}
+```
+
 ## CTreeView 类
 ### [CTreeView 类](https://docs.microsoft.com/zh-cn/cpp/mfc/reference/ctreeview-class?view=vs-2019)
 ### [CTreeCtrl 与CTreeView](https://docs.microsoft.com/zh-cn/cpp/mfc/ctreectrl-vs-ctreeview?view=vs-2019)

@@ -429,6 +429,30 @@ HTREEITEM  finditem(HTREEITEM  item, CString strtext)
     return item;  
 }
 ```
+### 5、展开所有节点 
+```cpp
+void CMenuCreatDlg::OnMENUITEMexpandtree() //展开所有节点  
+{  
+    // TODO: Add your command handler code here  
+     MyExpandTree(m_tree.GetRootItem());   
+}  
+   
+void CMenuCreatDlg::MyExpandTree(HTREEITEM hTreeItem)  
+{  
+    if(!m_tree.ItemHasChildren(hTreeItem))  
+    {  
+        return;  
+    }  
+    HTREEITEM hNextItem = m_tree.GetChildItem(hTreeItem);  
+    while (hNextItem != NULL)  
+    {  
+        MyExpandTree(hNextItem);  
+        hNextItem = m_tree.GetNextItem(hNextItem, TVGN_NEXT);  
+    }  
+    m_tree.Expand(hTreeItem,TVE_EXPAND);  
+}  
+```
+
 ## CTreeView 类
 ### [CTreeView 类](https://docs.microsoft.com/zh-cn/cpp/mfc/reference/ctreeview-class?view=vs-2019)
 ### [CTreeCtrl 与CTreeView](https://docs.microsoft.com/zh-cn/cpp/mfc/ctreectrl-vs-ctreeview?view=vs-2019)

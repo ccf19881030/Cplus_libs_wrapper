@@ -429,7 +429,7 @@ HTREEITEM  finditem(HTREEITEM  item, CString strtext)
     return item;  
 }
 ```
-### 5、展开所有节点 
+### 5、[展开所有节点](https://blog.csdn.net/miss_easy/article/details/42456385) 
 ```cpp
 void CMenuCreatDlg::OnMENUITEMexpandtree() //展开所有节点  
 {  

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _MLUALIB_H_
+#define _MLUALIB_H_
 
 extern "C"
 {
@@ -17,5 +18,7 @@ extern "C"
 	#define DLL_LUA_API extern "C"
 #endif
 
-// 定义导出函数
+// 瀹氫箟瀵煎嚭鍑芥暟
 DLL_LUA_API int luaopen_mLualib(lua_State* L);
+
+#endif 	// _MLUALIB_H_

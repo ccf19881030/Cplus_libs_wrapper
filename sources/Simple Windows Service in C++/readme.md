@@ -7,3 +7,5 @@
 ### [Starting a Service](https://docs.microsoft.com/zh-cn/windows/desktop/Services/starting-a-service)
 
 ### [The Complete Service Sample](https://docs.microsoft.com/zh-cn/windows/desktop/Services/the-complete-service-sample)
+
+## 3、[用 C 语言编写 Windows 服务程序的五个步骤](https://www.cnblogs.com/songtzu/p/3543920.html)

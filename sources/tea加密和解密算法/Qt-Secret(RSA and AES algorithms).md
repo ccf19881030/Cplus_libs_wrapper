@@ -1,8 +1,5 @@
 ## [QuasarApp/Qt-Secret](https://github.com/QuasarApp/Qt-Secret)
 Fast encryption library supporting RSA and AES algorithms.
-# ![Qt-Secret Logo](res/png/QtSecretLogo2.png)
-
-Fast encryption library supporting RSA and AES algorithms.
 
 # Futures 
 The Qt-Secret library supports the following algorithms:

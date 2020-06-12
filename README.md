@@ -37,6 +37,8 @@ Boost库官网地址为：[http://www.boost.org/](http://www.boost.org/)，本�
 本书中的所有示例均基于C ++ 11标准。 在测试期间，所有编译器都配置为启用对C ++ 11的支持。 大多数示例都可以在Windows，Linux和OS X上运行，但有一些依赖于平台。 例外在示例描述中说明。
 
 ## 6、C++的一些相关资源
-- [awesome-cpp](https://github.com/fffaraz/awesome-cpp)
+### [awesome-cpp](https://github.com/fffaraz/awesome-cpp)
 A curated list of awesome C++ (or C) frameworks, libraries, resources, and shiny things. Inspired by awesome-... stuff.
 [http://fffaraz.github.io/awesome-cpp/](http://fffaraz.github.io/awesome-cpp/)
+### [CppTemplateTutorial](https://github.com/wuye9036/CppTemplateTutorial)
+中文的C++ Template的教学指南。与知名书籍C++ Templates不同，该系列教程将C++ Templates作为一门图灵完备的语言来讲授，以求帮助读者对Meta-Programming融会贯通。

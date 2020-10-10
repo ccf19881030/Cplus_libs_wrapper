@@ -58,6 +58,48 @@ A curated list of awesome C++ (or C) frameworks, libraries, resources, and shiny
 - [Windows10下使用VS2017编译和使用yaml-cpp库](https://blog.csdn.net/ccf19881030/article/details/108676484)
 - [VS2017编译SNMP++](https://blog.csdn.net/ccf19881030/article/details/108485204)
 - [VS2017中使用CppSQLite报出编译器错误C2440](https://blog.csdn.net/ccf19881030/article/details/108116945)
+- [VC++ libcurl FTP上传客户端程序](https://blog.csdn.net/ccf19881030/article/details/108082523)
+- [CentOS7.8下编译muduo库找不到Boost库报错的解决方法](https://blog.csdn.net/ccf19881030/article/details/107850477)
+- [Windows下使用VS2013编译使用SDL库](https://blog.csdn.net/ccf19881030/article/details/107525122)
+- [在Windows10中Visual Studio2017中使用boost1.69.0](https://blog.csdn.net/ccf19881030/article/details/104696222)
+- [在CentOS 6.5上构建Apache Thrift](https://blog.csdn.net/ccf19881030/article/details/105964759)
+- [使用rapidJson C++库生成JSON字符串](https://blog.csdn.net/ccf19881030/article/details/104547929)
 
+## 一些C++的构建工具：CMake、Makefile工具链的使用
+### [CMake的使用](https://blog.csdn.net/ccf19881030/article/details/107518640)
+  CMake是一个跨平台的Makefile生成工具，可以根据特定的规则生成相应的Makefile文件，并对C/C++源代码进行编译和管理。
+ 有两篇博客介绍CMake的使用，比较通俗易懂，链接地址是：
+* [Cmake 详解](https://blog.codekissyoung.com/常用软件/cmake)
+* [CMake 入门实战](https://www.hahack.com/codes/cmake/)
+* CMake的官方下载地址为：[https://cmake.org/download/](https://cmake.org/download/)
+* 官方文档地址为：[CMake 3.16 Documentation](https://cmake.org/documentation/)
+* 官方的CMake指南地址为：[CMake Tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
+* [在 linux 下使用 CMake 构建应用程序](https://www.ibm.com/developerworks/cn/linux/l-cn-cmake/)
 
+### makefile
+- [跟我一起写 Makefile（一）- 陈皓](https://blog.csdn.net/haoel/article/details/2886)
 
+### GDB
+- [用GDB调试程序（一）(https://blog.csdn.net/haoel/article/details/2879)
+
+## 一些C++第三方库
+### 1、[CppSQLite - C++ Wrapper for SQLite](https://blog.csdn.net/ccf19881030/article/details/108116218)
+CodeProject上面有一个关于Windows系统下SQLite的C++封装类，具体地址为：[CppSQLite - C++ Wrapper for SQLite](https://www.codeproject.com/Articles/6343/CppSQLite-C-Wrapper-for-SQLite)，如下图所示：
+![CppSqlite](https://img-blog.csdnimg.cn/20200820091952205.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NjZjE5ODgxMDMw,size_16,color_FFFFFF,t_70#pic_center)
+[CppSqlite](https://www.codeproject.com/Articles/6343/CppSQLite-C-Wrapper-for-SQLite)是基于[sqlite](https://www.sqlite.org/index.html) C语言库的C++的简单封装。
+
+正如介绍中所说的一样：
+This article describes CppSQLite, a very thin C++ wrapper around the public domain SQLite database library.
+
+A description of how to link applications with SQLite is provided, then an example program using CppSQLite is presented, and finally the CppSQLite classes are documented.
+
+To set the scene, here is a quote from the SQLite author...
+
+SQLite is a C library that implements an embeddable SQL database engine. Programs that link with the SQLite library can have SQL database access without running a separate RDBMS process. The distribution comes with a standalone command-line access program (SQLite) that can be used to administer a SQLite database and which serves as an example of how to use the SQLite library.
+
+SQLite is not a client library used to connect to a big database server. SQLite is the server. The SQLite library reads and writes directly to and from the database files on disk.
+这个库在Windows下Visual Studio环境下还是比较好用的，就是从2011年后就好久没更新过了。
+
+### 2、[FFmpeg学习资料](https://blog.csdn.net/ccf19881030/article/details/107375563)
+
+### 3、[QT开源网站和相关资料](https://blog.csdn.net/ccf19881030/article/details/104241931)

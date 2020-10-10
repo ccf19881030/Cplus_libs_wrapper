@@ -42,3 +42,22 @@ A curated list of awesome C++ (or C) frameworks, libraries, resources, and shiny
 [http://fffaraz.github.io/awesome-cpp/](http://fffaraz.github.io/awesome-cpp/)
 ### [CppTemplateTutorial](https://github.com/wuye9036/CppTemplateTutorial)
 中文的C++ Template的教学指南。与知名书籍C++ Templates不同，该系列教程将C++ Templates作为一门图灵完备的语言来讲授，以求帮助读者对Meta-Programming融会贯通。
+
+### Cocos2d-x
+- [Windwos10+VS2017+Python 2.7.14+cocos2d-x 4.0开发环境搭建](https://blog.csdn.net/ccf19881030/article/details/108762154)
+- [Win10+Python2.7.14+cocos2d-x-3.17.2+VS2017环境搭建](https://blog.csdn.net/ccf19881030/article/details/108807428)
+- [Win7环境下VS2010配置Cocos2d-x-2.1.4最新版本的开发环境(亲测)](https://blog.csdn.net/ccf19881030/article/details/9204801)
+- [Cocos2d-x初学者教程-翻译](https://blog.csdn.net/ccf19881030/article/details/108879791)
+- [Guanghui Qu写的2015年4月30号的一篇博文 Cocos2d-x Tutorial for Beginners](https://www.raywenderlich.com/1848-cocos2d-x-tutorial-for-beginners)
+- [How To Make A Simple iPhone Game with Cocos2D 2.X Tutorial](https://www.raywenderlich.com/2824-how-to-make-a-simple-iphone-game-with-cocos2d-2-x-tutorial)
+
+## 7、一些C++库在VS2017和CentOS7下的编译和安装、使用
+- [CentOS7下编译安装libmodbus库](https://blog.csdn.net/ccf19881030/article/details/108695110)
+- [Windows10中VS2017环境下使用libmodbus库Modbus TCP读取设备的数据](https://blog.csdn.net/ccf19881030/article/details/108693543)
+- [CentOS7下编译yaml-cpp库](https://blog.csdn.net/ccf19881030/article/details/108676702)
+- [Windows10下使用VS2017编译和使用yaml-cpp库](https://blog.csdn.net/ccf19881030/article/details/108676484)
+- [VS2017编译SNMP++](https://blog.csdn.net/ccf19881030/article/details/108485204)
+- [VS2017中使用CppSQLite报出编译器错误C2440](https://blog.csdn.net/ccf19881030/article/details/108116945)
+
+
+

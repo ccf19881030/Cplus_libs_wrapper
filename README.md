@@ -43,7 +43,7 @@ A curated list of awesome C++ (or C) frameworks, libraries, resources, and shiny
 ### [CppTemplateTutorial](https://github.com/wuye9036/CppTemplateTutorial)
 中文的C++ Template的教学指南。与知名书籍C++ Templates不同，该系列教程将C++ Templates作为一门图灵完备的语言来讲授，以求帮助读者对Meta-Programming融会贯通。
 
-### Cocos2d-x
+### 7、Cocos2d-x
 - [Windwos10+VS2017+Python 2.7.14+cocos2d-x 4.0开发环境搭建](https://blog.csdn.net/ccf19881030/article/details/108762154)
 - [Win10+Python2.7.14+cocos2d-x-3.17.2+VS2017环境搭建](https://blog.csdn.net/ccf19881030/article/details/108807428)
 - [Win7环境下VS2010配置Cocos2d-x-2.1.4最新版本的开发环境(亲测)](https://blog.csdn.net/ccf19881030/article/details/9204801)
@@ -51,7 +51,7 @@ A curated list of awesome C++ (or C) frameworks, libraries, resources, and shiny
 - [Guanghui Qu写的2015年4月30号的一篇博文 Cocos2d-x Tutorial for Beginners](https://www.raywenderlich.com/1848-cocos2d-x-tutorial-for-beginners)
 - [How To Make A Simple iPhone Game with Cocos2D 2.X Tutorial](https://www.raywenderlich.com/2824-how-to-make-a-simple-iphone-game-with-cocos2d-2-x-tutorial)
 
-## 7、一些C++库在VS2017和CentOS7下的编译和安装、使用
+## 8、一些C++库在VS2017和CentOS7下的编译和安装、使用
 - [CentOS7下编译安装libmodbus库](https://blog.csdn.net/ccf19881030/article/details/108695110)
 - [Windows10中VS2017环境下使用libmodbus库Modbus TCP读取设备的数据](https://blog.csdn.net/ccf19881030/article/details/108693543)
 - [CentOS7下编译yaml-cpp库](https://blog.csdn.net/ccf19881030/article/details/108676702)
@@ -65,8 +65,8 @@ A curated list of awesome C++ (or C) frameworks, libraries, resources, and shiny
 - [在CentOS 6.5上构建Apache Thrift](https://blog.csdn.net/ccf19881030/article/details/105964759)
 - [使用rapidJson C++库生成JSON字符串](https://blog.csdn.net/ccf19881030/article/details/104547929)
 
-## 一些C++的构建工具：CMake、Makefile工具链的使用
-### [CMake的使用](https://blog.csdn.net/ccf19881030/article/details/107518640)
+## 9、一些C++的构建工具：CMake、Makefile工具链的使用
+### A、[CMake的使用](https://blog.csdn.net/ccf19881030/article/details/107518640)
   CMake是一个跨平台的Makefile生成工具，可以根据特定的规则生成相应的Makefile文件，并对C/C++源代码进行编译和管理。
  有两篇博客介绍CMake的使用，比较通俗易懂，链接地址是：
 * [Cmake 详解](https://blog.codekissyoung.com/常用软件/cmake)
@@ -76,14 +76,14 @@ A curated list of awesome C++ (or C) frameworks, libraries, resources, and shiny
 * 官方的CMake指南地址为：[CMake Tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
 * [在 linux 下使用 CMake 构建应用程序](https://www.ibm.com/developerworks/cn/linux/l-cn-cmake/)
 
-### makefile
+### B、makefile
 - [跟我一起写 Makefile（一）- 陈皓](https://blog.csdn.net/haoel/article/details/2886)
 
-### GDB
+### C、GDB
 - [用GDB调试程序（一）(https://blog.csdn.net/haoel/article/details/2879)
 
-## 一些C++第三方库
-### 1、[CppSQLite - C++ Wrapper for SQLite](https://blog.csdn.net/ccf19881030/article/details/108116218)
+## 10、一些C++第三方库
+### A、[CppSQLite - C++ Wrapper for SQLite](https://blog.csdn.net/ccf19881030/article/details/108116218)
 CodeProject上面有一个关于Windows系统下SQLite的C++封装类，具体地址为：[CppSQLite - C++ Wrapper for SQLite](https://www.codeproject.com/Articles/6343/CppSQLite-C-Wrapper-for-SQLite)，如下图所示：
 ![CppSqlite](https://img-blog.csdnimg.cn/20200820091952205.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NjZjE5ODgxMDMw,size_16,color_FFFFFF,t_70#pic_center)
 [CppSqlite](https://www.codeproject.com/Articles/6343/CppSQLite-C-Wrapper-for-SQLite)是基于[sqlite](https://www.sqlite.org/index.html) C语言库的C++的简单封装。
@@ -100,6 +100,15 @@ SQLite is a C library that implements an embeddable SQL database engine. Program
 SQLite is not a client library used to connect to a big database server. SQLite is the server. The SQLite library reads and writes directly to and from the database files on disk.
 这个库在Windows下Visual Studio环境下还是比较好用的，就是从2011年后就好久没更新过了。
 
-### 2、[FFmpeg学习资料](https://blog.csdn.net/ccf19881030/article/details/107375563)
+### B、[FFmpeg学习资料](https://blog.csdn.net/ccf19881030/article/details/107375563)
 
-### 3、[QT开源网站和相关资料](https://blog.csdn.net/ccf19881030/article/details/104241931)
+### C、[QT开源网站和相关资料](https://blog.csdn.net/ccf19881030/article/details/104241931)
+
+## 11、[fffaraz/awesome-cpp](https://github.com/fffaraz/awesome-cpp)
+
+## 12、[JesseTG/awesome-qt](https://github.com/JesseTG/awesome-qt)
+
+## 13、[https://github.com/TheAlgorithms](https://github.com/TheAlgorithms)
+Open Source resource for learning Data Structures & Algorithms and their implementation in any Programming Language
+- [TheAlgorithms/C-Plus-Plus](https://github.com/TheAlgorithms/C-Plus-Plus)
+Collection of various algorithms in mathematics, machine learning, computer science and physics implemented in C++ for educational purposes.

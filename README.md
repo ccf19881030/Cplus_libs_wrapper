@@ -104,6 +104,9 @@ SQLite is not a client library used to connect to a big database server. SQLite 
 
 ### C、[QT开源网站和相关资料](https://blog.csdn.net/ccf19881030/article/details/104241931)
 
+### redis的C++客户端库
+关于redis的C++客户端库，可以参考[https://redis.io/clients#c-plus-plus](https://redis.io/clients#c-plus-plus)
+
 ## 11、[fffaraz/awesome-cpp](https://github.com/fffaraz/awesome-cpp)
 
 ## 12、[JesseTG/awesome-qt](https://github.com/JesseTG/awesome-qt)

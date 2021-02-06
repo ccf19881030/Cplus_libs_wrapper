@@ -64,6 +64,9 @@ A curated list of awesome C++ (or C) frameworks, libraries, resources, and shiny
 - [在Windows10中Visual Studio2017中使用boost1.69.0](https://blog.csdn.net/ccf19881030/article/details/104696222)
 - [在CentOS 6.5上构建Apache Thrift](https://blog.csdn.net/ccf19881030/article/details/105964759)
 - [使用rapidJson C++库生成JSON字符串](https://blog.csdn.net/ccf19881030/article/details/104547929)
+- [CentOS7下编译yaml-cpp库](https://ccf19881030.blog.csdn.net/article/details/108676702)
+- [Windows10下使用VS2017编译和使用yaml-cpp库](https://ccf19881030.blog.csdn.net/article/details/108676484)
+- [Windows下使用VS2019和CMake 3.18.3编译使用yaml-cpp库](https://ccf19881030.blog.csdn.net/article/details/113282265)
 
 ## 9、一些C++的构建工具：CMake、Makefile工具链的使用
 ### A、[CMake的使用](https://blog.csdn.net/ccf19881030/article/details/107518640)
@@ -106,6 +109,12 @@ SQLite is not a client library used to connect to a big database server. SQLite 
 
 ### redis的C++客户端库
 关于redis的C++客户端库，可以参考[https://redis.io/clients#c-plus-plus](https://redis.io/clients#c-plus-plus)
+
+## Cocos2d-x游戏开发
+- [Win7环境下VS2010配置Cocos2d-x-2.1.4最新版本的开发环境(亲测)](https://ccf19881030.blog.csdn.net/article/details/9204801)
+- [Win10+Python2.7.14+cocos2d-x-3.17.2+VS2017环境搭建](https://ccf19881030.blog.csdn.net/article/details/108807428)
+- [Windwos10+VS2017+Python 2.7.14+cocos2d-x 4.0开发环境搭建](https://ccf19881030.blog.csdn.net/article/details/108762154)
+- [Cocos2d-x初学者教程](https://ccf19881030.blog.csdn.net/article/details/108879791)
 
 ## 11、[fffaraz/awesome-cpp](https://github.com/fffaraz/awesome-cpp)
 

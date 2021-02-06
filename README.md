@@ -43,13 +43,15 @@ A curated list of awesome C++ (or C) frameworks, libraries, resources, and shiny
 ### [CppTemplateTutorial](https://github.com/wuye9036/CppTemplateTutorial)
 中文的C++ Template的教学指南。与知名书籍C++ Templates不同，该系列教程将C++ Templates作为一门图灵完备的语言来讲授，以求帮助读者对Meta-Programming融会贯通。
 
-### 7、Cocos2d-x
+### 7、Cocos2d-x游戏开发
 - [Windwos10+VS2017+Python 2.7.14+cocos2d-x 4.0开发环境搭建](https://blog.csdn.net/ccf19881030/article/details/108762154)
 - [Win10+Python2.7.14+cocos2d-x-3.17.2+VS2017环境搭建](https://blog.csdn.net/ccf19881030/article/details/108807428)
 - [Win7环境下VS2010配置Cocos2d-x-2.1.4最新版本的开发环境(亲测)](https://blog.csdn.net/ccf19881030/article/details/9204801)
 - [Cocos2d-x初学者教程-翻译](https://blog.csdn.net/ccf19881030/article/details/108879791)
 - [Guanghui Qu写的2015年4月30号的一篇博文 Cocos2d-x Tutorial for Beginners](https://www.raywenderlich.com/1848-cocos2d-x-tutorial-for-beginners)
 - [How To Make A Simple iPhone Game with Cocos2D 2.X Tutorial](https://www.raywenderlich.com/2824-how-to-make-a-simple-iphone-game-with-cocos2d-2-x-tutorial)
+- [Win7环境下VS2010配置Cocos2d-x-2.1.4最新版本的开发环境(亲测)](https://ccf19881030.blog.csdn.net/article/details/9204801)
+- [Cocos2d-x初学者教程](https://ccf19881030.blog.csdn.net/article/details/108879791)
 
 ## 8、一些C++库在VS2017和CentOS7下的编译和安装、使用
 - [CentOS7下编译安装libmodbus库](https://blog.csdn.net/ccf19881030/article/details/108695110)
@@ -109,12 +111,6 @@ SQLite is not a client library used to connect to a big database server. SQLite 
 
 ### redis的C++客户端库
 关于redis的C++客户端库，可以参考[https://redis.io/clients#c-plus-plus](https://redis.io/clients#c-plus-plus)
-
-## Cocos2d-x游戏开发
-- [Win7环境下VS2010配置Cocos2d-x-2.1.4最新版本的开发环境(亲测)](https://ccf19881030.blog.csdn.net/article/details/9204801)
-- [Win10+Python2.7.14+cocos2d-x-3.17.2+VS2017环境搭建](https://ccf19881030.blog.csdn.net/article/details/108807428)
-- [Windwos10+VS2017+Python 2.7.14+cocos2d-x 4.0开发环境搭建](https://ccf19881030.blog.csdn.net/article/details/108762154)
-- [Cocos2d-x初学者教程](https://ccf19881030.blog.csdn.net/article/details/108879791)
 
 ## 11、[fffaraz/awesome-cpp](https://github.com/fffaraz/awesome-cpp)
 

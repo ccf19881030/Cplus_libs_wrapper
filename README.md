@@ -51,7 +51,6 @@ A curated list of awesome C++ (or C) frameworks, libraries, resources, and shiny
 - [Guanghui Qu写的2015年4月30号的一篇博文 Cocos2d-x Tutorial for Beginners](https://www.raywenderlich.com/1848-cocos2d-x-tutorial-for-beginners)
 - [How To Make A Simple iPhone Game with Cocos2D 2.X Tutorial](https://www.raywenderlich.com/2824-how-to-make-a-simple-iphone-game-with-cocos2d-2-x-tutorial)
 - [Win7环境下VS2010配置Cocos2d-x-2.1.4最新版本的开发环境(亲测)](https://ccf19881030.blog.csdn.net/article/details/9204801)
-- [Cocos2d-x初学者教程](https://ccf19881030.blog.csdn.net/article/details/108879791)
 
 ## 8、一些C++库在VS2017和CentOS7下的编译和安装、使用
 - [CentOS7下编译安装libmodbus库](https://blog.csdn.net/ccf19881030/article/details/108695110)

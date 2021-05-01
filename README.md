@@ -108,8 +108,24 @@ SQLite is not a client library used to connect to a big database server. SQLite 
 
 ### C、[QT开源网站和相关资料](https://blog.csdn.net/ccf19881030/article/details/104241931)
 
-### redis的C++客户端库
+### D、redis的C++客户端库
 关于redis的C++客户端库，可以参考[https://redis.io/clients#c-plus-plus](https://redis.io/clients#c-plus-plus)
+
+### E、[一些常用的C++ Json解析库](https://ccf19881030.blog.csdn.net/article/details/116329900)
+- [nlohmann/json](https://github.com/nlohmann/json)
+JSON for Modern C++
+- [rapidjson](https://github.com/Tencent/rapidjson)
+A fast JSON parser/generator for C++ with both SAX/DOM style API
+
+### F、一些常用的Xml C++解析库
+- [pugixml](https://github.com/zeux/pugixml/)
+Light-weight, simple and fast XML parser for C++ with XPath support
+只需要包含头文件然后引入使用就成，不需要编译Lib库就能使用，个人感觉使用起来比较顺手。
+- [tinyxml2](https://github.com/leethomason/tinyxml2)
+TinyXML2 is a simple, small, efficient, C++ XML parser that can be easily integrated into other programs.
+- Qt的Xml解析库
+可以使用Qt的xml解析模块，常见的Qt的Xml读写类可以参考Qt帮助手册，比如[QxmlReader](https://doc.qt.io/qt-5/qxmlreader.html)、[QXmlStreamReader](https://doc.qt.io/qt-5/qxmlstreamreader.html)、[QXmlStreamWriter](https://doc.qt.io/qt-5/qxmlstreamwriter.html)
+
 
 ## 11、[fffaraz/awesome-cpp](https://github.com/fffaraz/awesome-cpp)
 

@@ -10,6 +10,14 @@ JSON for Modern C++
 - Qt的解析库
 - Boost库中的json解析
 在Github上面有一个仓库[miloyip/nativejson-benchmark](https://github.com/miloyip/nativejson-benchmark)，描述了常见的C/C++ Json解析库的性能对比。
+另外，知乎上面有篇帖子讨论了[有哪些 C++ 的 JSON 库比较好呢？](https://www.zhihu.com/question/20211077)，可以借鉴一下。
+我觉得有位兄弟对于虑[nlohmann/json](https://github.com/nlohmann/json)和[rapidjson](https://github.com/Tencent/rapidjson)这两个C++解析库的评论和对比比较到位，所以建议不是很追求效率的条件还是建议使用[nlohmann/json](https://github.com/nlohmann/json)，否则可以选择腾讯的[rapidjson](https://github.com/Tencent/rapidjson)。
+非常推荐 [nlohmann/json](https://github.com/nlohmann/json)看性能测试应该是rapidjson效率最好，所以最开始我也用的rapidjson](https://github.com/Tencent/rapidjson)，但我发现[rapidjson](https://github.com/Tencent/rapidjson)的接口太难用了，太不友好，所以我就换成了[nlohmann/json](https://github.com/nlohmann/json0我觉得除非你的项目对效率要求极度严格，已经明确到需要考虑[nlohmann/json](https://github.com/nlohmann/json)和[rapidjson](https://github.com/Tencent/rapidjson)之间的这一点效率差异了，否则毫不犹豫用[nlohmann/json](https://github.com/nlohmann/json)吧，现代C++网格，用起来相当简单。为了那么一点可能根本不需要考虑的效率问题而去选择[rapidjson](https://github.com/Tencent/rapidjson)，而导致编码难度和心智负担大大提高，我觉得简直得不偿失。
+
+作者：zhllxt
+链接：https://www.zhihu.com/question/20211077/answer/1620192069
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 下面是我在实际项目中使用nlohmann/json库以及Qt的Json库对自定义结构体进行序列化和反序列化的一些代码片段：
 ```cpp

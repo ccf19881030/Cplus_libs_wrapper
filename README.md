@@ -84,7 +84,7 @@ A curated list of awesome C++ (or C) frameworks, libraries, resources, and shiny
 - [跟我一起写 Makefile（一）- 陈皓](https://blog.csdn.net/haoel/article/details/2886)
 
 ### C、GDB
-- [用GDB调试程序（一）(https://blog.csdn.net/haoel/article/details/2879)
+- [用GDB调试程序（一）](https://blog.csdn.net/haoel/article/details/2879)
 
 ## 10、一些C++第三方库
 ### A、[CppSQLite - C++ Wrapper for SQLite](https://blog.csdn.net/ccf19881030/article/details/108116218)

@@ -135,3 +135,7 @@ TinyXML2 is a simple, small, efficient, C++ XML parser that can be easily integr
 Open Source resource for learning Data Structures & Algorithms and their implementation in any Programming Language
 - [TheAlgorithms/C-Plus-Plus](https://github.com/TheAlgorithms/C-Plus-Plus)
 Collection of various algorithms in mathematics, machine learning, computer science and physics implemented in C++ for educational purposes.
+
+## 14、[https://github.com/huihut/interview](https://github.com/huihut/interview)
+C/C++ 技术面试基础知识总结，包括语言、程序库、数据结构、算法、系统、网络、链接装载库等知识及面试经验、招聘、内推等信息。
+

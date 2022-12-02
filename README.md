@@ -52,7 +52,7 @@ A curated list of awesome C++ (or C) frameworks, libraries, resources, and shiny
 - [How To Make A Simple iPhone Game with Cocos2D 2.X Tutorial](https://www.raywenderlich.com/2824-how-to-make-a-simple-iphone-game-with-cocos2d-2-x-tutorial)
 - [Win7环境下VS2010配置Cocos2d-x-2.1.4最新版本的开发环境(亲测)](https://ccf19881030.blog.csdn.net/article/details/9204801)
 
-## 8、一些C++库在VS2017和CentOS7下的编译和安装、使用
+## 8、一些C++库在Visual Studio和CentOS7下的编译和安装、使用
 - [CentOS7下编译安装libmodbus库](https://blog.csdn.net/ccf19881030/article/details/108695110)
 - [Windows10中VS2017环境下使用libmodbus库Modbus TCP读取设备的数据](https://blog.csdn.net/ccf19881030/article/details/108693543)
 - [CentOS7下编译yaml-cpp库](https://blog.csdn.net/ccf19881030/article/details/108676702)
@@ -68,6 +68,7 @@ A curated list of awesome C++ (or C) frameworks, libraries, resources, and shiny
 - [CentOS7下编译yaml-cpp库](https://ccf19881030.blog.csdn.net/article/details/108676702)
 - [Windows10下使用VS2017编译和使用yaml-cpp库](https://ccf19881030.blog.csdn.net/article/details/108676484)
 - [Windows下使用VS2019和CMake 3.18.3编译使用yaml-cpp库](https://ccf19881030.blog.csdn.net/article/details/113282265)
+- [Windows10中使用VS2022和Cmake编译构建C++开源日志库-spdlog](https://editor.csdn.net/md/?articleId=127937192)
 
 ## 9、一些C++的构建工具：CMake、Makefile工具链的使用
 ### A、[CMake的使用](https://blog.csdn.net/ccf19881030/article/details/107518640)

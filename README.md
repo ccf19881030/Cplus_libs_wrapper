@@ -140,3 +140,19 @@ Collection of various algorithms in mathematics, machine learning, computer scie
 ## 14、[https://github.com/huihut/interview](https://github.com/huihut/interview)
 C/C++ 技术面试基础知识总结，包括语言、程序库、数据结构、算法、系统、网络、链接装载库等知识及面试经验、招聘、内推等信息。
 
+## 15、OpenCV C++使用示例
+- [LEARN OPENCV C++ in 4 HOURS | Including 3x Projects | Computer Vision](https://www.youtube.com/watch?v=2FYm3GOonhk)
+- [murtazahassan/Learn-OpenCV-cpp-in-4-Hours](https://github.com/murtazahassan/Learn-OpenCV-cpp-in-4-Hours)
+-  [LEARN OPENCV in 3 HOURS with Python | Including 3xProjects | Computer Vision](https://youtu.be/WQeoO7MI0Bs)
+- [Learn-OpenCV-in-3-hours](https://github.com/murtazahassan/Learn-OpenCV-in-3-hours)
+- [OpenCV官网](https://opencv.org/)
+- [OpenCV-Get Started](https://opencv.org/get-started/)
+- [OpenCV Github仓库源代码](https://github.com/opencv/opencv)
+- [OpenCV tutorial](https://docs.opencv.org/master/d9/df8/tutorial_root.html)
+- [VC++中使用OpenCV读取图像、读取本地视频、读取摄像头并实时显示](https://blog.csdn.net/ccf19881030/article/details/135581535)
+- [opencv中初学者必须了解的5个函数-灰度化、模糊、Canny边缘检测、膨胀和侵蚀](https://blog.csdn.net/ccf19881030/article/details/135722118)
+- [VC++中使用OpenCV进行形状和轮廓检测](https://blog.csdn.net/ccf19881030/article/details/135725499)
+- [VC++中使用OpenCV对原图像中的四边形区域做透视变换](https://blog.csdn.net/ccf19881030/article/details/135613467)
+- [VC++中使用OpenCV进行颜色检测](https://blog.csdn.net/ccf19881030/article/details/135707837)
+- [VC++中使用OpenCV进行人脸检测](https://blog.csdn.net/ccf19881030/article/details/135725593)
+
